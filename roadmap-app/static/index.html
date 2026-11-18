@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Roadmap Steal a Crystal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Luckiest+Guy&display=swap">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header class="top">
+    <div class="brand">
+      <span class="gem" aria-hidden="true"></span>
+      <div>
+        <h1>STEAL A CRYSTAL!</h1>
+        <p class="sub">Roadmap · release candidate V1</p>
+      </div>
+    </div>
+    <div class="tools">
+      <input id="search" type="search" placeholder="Rechercher…" aria-label="Rechercher une carte">
+      <label class="toggle"><input id="onlyPending" type="checkbox"> À traiter seulement <span id="pendingCount" class="count">0</span></label>
+      <span id="status" class="status" role="status"></span>
+    </div>
+  </header>
+
+  <main id="board" class="board" aria-label="Tableau de la roadmap"></main>
+
+  <dialog id="editor">
+    <form id="editForm" method="dialog">
+      <h2 id="editTitle">Carte</h2>
+      <label>Titre <input name="title" required maxlength="140"></label>
+      <label>Description <textarea name="description" rows="5" maxlength="4000"></textarea></label>
+      <div class="row">
+        <label>Colonne <select name="column"></select></label>
+        <label>Thème <input name="theme" maxlength="40"></label>
+      </div>
+      <div class="row">
+        <label>Effort
+          <select name="effort"><option value="">—</option><option>S</option><option>S-M</option><option>M</option><option>M-L</option><option>L</option></select>
+        </label>
+        <label>Risque
+          <select name="risk"><option value="">—</option><option>faible</option><option>moyen</option><option>élevé</option></select>
+        </label>
+      </div>
+      <label>Œil sécurité <textarea name="security" rows="2" maxlength="1000"></textarea></label>
+      <section id="notes" class="notes" hidden></section>
+      <p id="formError" class="error" role="alert"></p>
+      <div class="actions">
+        <button type="button" id="deleteBtn" class="danger">Supprimer</button>
+        <span class="spacer"></span>
+        <button type="button" id="cancelBtn">Annuler</button>
+        <button type="submit" id="saveBtn" class="primary">Enregistrer</button>
+      </div>
+    </form>
+  </dialog>
+
+  <script src="/app.js"></script>
+</body>
+</html>
