@@ -10,13 +10,11 @@ Jeu Roblox de minage dans une grotte de cristaux, développé avec Roblox Studio
 <!-- ROADMAP:START (généré par roadmap-app/roadmap.py export, ne pas modifier à la main) -->
 ## Roadmap
 
-_Mise à jour : 18/11/2026 18:23 · 63 cartes · 0 à traiter._ Version modifiable : l'app locale `py roadmap-app/server.py` → http://127.0.0.1:8787
+_Mise à jour : 18/11/2026 18:26 · 65 cartes · 0 à traiter._ Version modifiable : l'app locale `py roadmap-app/server.py` → http://127.0.0.1:8787
 
-### 🚦 Release candidate (avant V1) (16)
+### 🚦 Release candidate (avant V1) (17)
 
 - [ ] **Sauvegarder la place (v58)** — Arrêter le test de jeu, Ctrl+S, vérifier sac, chaussures et images d'auras. · _effort S · risque faible_
-- [ ] **Créer les 3 Game Pass des starter packs** — Starter 49 / Pro 149 / Elite 399, renseigner les ID dans Config.GamePasses (clés NoobPack, MediumPack, ProPack). · _effort S · risque faible_
-  - 🔒 Revérifier la propriété côté serveur à la connexion.
 - [ ] **Produits à ID 0 : créer ou cacher** — Pioches Rainbow / Ruby et packs de vitesse Speed25/100/500 affichent « Coming soon! ». · _effort S · risque faible_
 - [ ] **ProcessReceipt idempotent (bloquant)** — Mémoriser les PurchaseId, sauvegarder avant PurchaseGranted. · _effort S · risque faible_
   - 🔒 Évite double livraison et paiement sans livraison.
@@ -35,6 +33,10 @@ _Mise à jour : 18/11/2026 18:23 · 63 cartes · 0 à traiter._ Version modifiab
   - 🔒 Aucun avantage gratuit hors Studio.
 - [ ] **Copie .rbxl après publication** — Garder une copie de la place dans le dépôt pour revenir en arrière. · _effort S · risque faible_
 - [ ] **Créer le produit Robux « Skip a Day » (49 R$)** — Le créer sur le Creator Dashboard (produit développeur), puis renseigner son ID dans Config.DailySkip.Id. En attendant : gratuit dans Studio, « Coming soon! » dans le jeu publié. · _effort S · risque faible_
+  - 📝 L'ID 2093583130 reçu est un Game Pass (achetable une seule fois) : pas utilisable pour un SKIP répétable. Il faut un produit développeur. Carte laissée dans Avant la V1.
+- [ ] **Mettre hors vente le Game Pass « skip a day »** — Le Game Pass 2093583130 est en vente mais ne donne rien dans le jeu : le désactiver sur le Creator Dashboard pour qu'aucun joueur ne l'achète. · _effort S · risque faible_
+  - 🔒 Éviter un achat Robux sans contrepartie (remboursements, signalements).
+- [ ] **Renommer le Game Pass Elite sur Roblox** — Son nom sur Roblox est « elite\_pack.png » : c'est ce que voient les joueurs dans la fenêtre d'achat. Le renommer « Elite Pack ». · _effort S · risque faible_
 
 ### 🔧 En cours (0)
 
@@ -82,7 +84,7 @@ _Vide._
 
 - [ ] **Images d'auras sans anneaux au sol** — Les 11 anciennes images de cartes d'aura ont encore des anneaux au sol : les redessiner dans le style de la Prism si on veut tout uniformiser.
 
-### ✅ Fait (29)
+### ✅ Fait (30)
 
 <details><summary>Voir tout ce qui a été fait</summary>
 
@@ -119,6 +121,9 @@ _Vide._
   - 🔒 Reçu Robux enregistré dans la sauvegarde du joueur (PurchaseId) et sauvegardé avant validation : jamais donné deux fois.
 - [x] **Auras plus belles** — Contour lumineux et anneaux néon retirés, remplacés par des volutes d'énergie. Image dédiée pour la Prism Aura.
 - [x] **Formulaire admin CREATE CODE plus clair** — 3 étapes numérotées (nom, récompenses avec icônes et choix d'aura, limites), aperçu en direct de ce que les joueurs recevront.
+- [x] **Créer les 3 Game Pass des starter packs** — Starter 49 / Pro 149 / Elite 399, renseigner les ID dans Config.GamePasses (clés NoobPack, MediumPack, ProPack). · _effort S · risque faible_
+  - 🔒 Revérifier la propriété côté serveur à la connexion.
+  - 📝 ID renseignés (place v70) : Starter 2093673183 (R$ 59), Pro 2092851170 (R$ 99), Elite 2093529130 (R$ 159). Prix du jeu alignés sur Roblox. Un pack acheté hors du jeu donne maintenant son contenu à la connexion.
 
 </details>
 <!-- ROADMAP:END -->
