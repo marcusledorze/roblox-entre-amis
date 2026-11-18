@@ -10,9 +10,9 @@ Jeu Roblox de minage dans une grotte de cristaux, développé avec Roblox Studio
 <!-- ROADMAP:START (généré par roadmap-app/roadmap.py export, ne pas modifier à la main) -->
 ## Roadmap
 
-_Mise à jour : 18/11/2026 18:26 · 65 cartes · 0 à traiter._ Version modifiable : l'app locale `py roadmap-app/server.py` → http://127.0.0.1:8787
+_Mise à jour : 18/11/2026 18:42 · 68 cartes · 0 à traiter._ Version modifiable : l'app locale `py roadmap-app/server.py` → http://127.0.0.1:8787
 
-### 🚦 Release candidate (avant V1) (17)
+### 🚦 Release candidate (avant V1) (18)
 
 - [ ] **Sauvegarder la place (v58)** — Arrêter le test de jeu, Ctrl+S, vérifier sac, chaussures et images d'auras. · _effort S · risque faible_
 - [ ] **Produits à ID 0 : créer ou cacher** — Pioches Rainbow / Ruby et packs de vitesse Speed25/100/500 affichent « Coming soon! ». · _effort S · risque faible_
@@ -37,6 +37,7 @@ _Mise à jour : 18/11/2026 18:26 · 65 cartes · 0 à traiter._ Version modifiab
 - [ ] **Mettre hors vente le Game Pass « skip a day »** — Le Game Pass 2093583130 est en vente mais ne donne rien dans le jeu : le désactiver sur le Creator Dashboard pour qu'aucun joueur ne l'achète. · _effort S · risque faible_
   - 🔒 Éviter un achat Robux sans contrepartie (remboursements, signalements).
 - [ ] **Renommer le Game Pass Elite sur Roblox** — Son nom sur Roblox est « elite\_pack.png » : c'est ce que voient les joueurs dans la fenêtre d'achat. Le renommer « Elite Pack ». · _effort S · risque faible_
+- [ ] **Créer le Game Pass x2 Money et le produit Tapis +1 niveau** — Creator Dashboard : Game Pass « x2 Money » (prix au choix, 199 R$ proposé) et Developer Product « Treadmill +1 Level » (49 R$). Renseigner Config.GamePasses.DoubleMoney.Id et Config.TreadmillRobux.Id. En attendant : gratuits dans Studio, « Coming soon! » en ligne. · _effort S · risque faible_
 
 ### 🔧 En cours (0)
 
@@ -84,7 +85,7 @@ _Vide._
 
 - [ ] **Images d'auras sans anneaux au sol** — Les 11 anciennes images de cartes d'aura ont encore des anneaux au sol : les redessiner dans le style de la Prism si on veut tout uniformiser.
 
-### ✅ Fait (30)
+### ✅ Fait (32)
 
 <details><summary>Voir tout ce qui a été fait</summary>
 
@@ -124,6 +125,10 @@ _Vide._
 - [x] **Créer les 3 Game Pass des starter packs** — Starter 49 / Pro 149 / Elite 399, renseigner les ID dans Config.GamePasses (clés NoobPack, MediumPack, ProPack). · _effort S · risque faible_
   - 🔒 Revérifier la propriété côté serveur à la connexion.
   - 📝 ID renseignés (place v70) : Starter 2093673183 (R$ 59), Pro 2092851170 (R$ 99), Elite 2093529130 (R$ 159). Prix du jeu alignés sur Roblox. Un pack acheté hors du jeu donne maintenant son contenu à la connexion.
+- [x] **Pass x2 Money** — Nouveau Game Pass (R$ 199 proposé) : double l'argent des cristaux, se cumule avec le VIP. Médaillon dans les badges de droite et carte dans R$ SHOP &gt; GAMEPASSES. Testé en Play (place v72).
+  - 🔒 Bonus appliqué par le serveur (PlayerIncome), propriété revérifiée à la connexion.
+- [x] **Amélioration du tapis en Robux** — Bouton vert « LV N NOW! · R$ 49 » sous le panneau du tapis, dans les 8 bases : +1 niveau tout de suite. Testé en Play (clic sur le bouton, niveau 1 vers 2).
+  - 🔒 Produit développeur : reçu enregistré dans la sauvegarde du joueur et sauvegardé avant validation. Seul le propriétaire de la base peut cliquer.
 
 </details>
 <!-- ROADMAP:END -->

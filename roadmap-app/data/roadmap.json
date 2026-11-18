@@ -1,5 +1,5 @@
 {
-  "rev": 69,
+  "rev": 72,
   "cards": [
     {
       "id": "9b3125929f",
@@ -1671,6 +1671,81 @@
           "by": "claude",
           "action": "create",
           "detail": "Renommer le Game Pass Elite sur Roblox"
+        }
+      ]
+    },
+    {
+      "id": "7585495037",
+      "title": "Pass x2 Money",
+      "description": "Nouveau Game Pass (R$ 199 proposé) : double l'argent des cristaux, se cumule avec le VIP. Médaillon dans les badges de droite et carte dans R$ SHOP > GAMEPASSES. Testé en Play (place v72).",
+      "theme": "Robux",
+      "effort": "",
+      "risk": "",
+      "security": "Bonus appliqué par le serveur (PlayerIncome), propriété revérifiée à la connexion.",
+      "column": "done",
+      "position": 30,
+      "createdBy": "claude",
+      "createdAt": "2026-11-18T18:42:04",
+      "updatedAt": "2026-11-18T18:42:04",
+      "pending": false,
+      "pendingReason": "",
+      "notes": [],
+      "history": [
+        {
+          "at": "2026-11-18T18:42:04",
+          "by": "claude",
+          "action": "create",
+          "detail": "Pass x2 Money"
+        }
+      ]
+    },
+    {
+      "id": "1351383353",
+      "title": "Amélioration du tapis en Robux",
+      "description": "Bouton vert « LV N NOW! · R$ 49 » sous le panneau du tapis, dans les 8 bases : +1 niveau tout de suite. Testé en Play (clic sur le bouton, niveau 1 vers 2).",
+      "theme": "Robux",
+      "effort": "",
+      "risk": "",
+      "security": "Produit développeur : reçu enregistré dans la sauvegarde du joueur et sauvegardé avant validation. Seul le propriétaire de la base peut cliquer.",
+      "column": "done",
+      "position": 31,
+      "createdBy": "claude",
+      "createdAt": "2026-11-18T18:42:04",
+      "updatedAt": "2026-11-18T18:42:04",
+      "pending": false,
+      "pendingReason": "",
+      "notes": [],
+      "history": [
+        {
+          "at": "2026-11-18T18:42:04",
+          "by": "claude",
+          "action": "create",
+          "detail": "Amélioration du tapis en Robux"
+        }
+      ]
+    },
+    {
+      "id": "a594b4cad9",
+      "title": "Créer le Game Pass x2 Money et le produit Tapis +1 niveau",
+      "description": "Creator Dashboard : Game Pass « x2 Money » (prix au choix, 199 R$ proposé) et Developer Product « Treadmill +1 Level » (49 R$). Renseigner Config.GamePasses.DoubleMoney.Id et Config.TreadmillRobux.Id. En attendant : gratuits dans Studio, « Coming soon! » en ligne.",
+      "theme": "Release",
+      "effort": "S",
+      "risk": "faible",
+      "security": "",
+      "column": "rc",
+      "position": 17,
+      "createdBy": "claude",
+      "createdAt": "2026-11-18T18:42:05",
+      "updatedAt": "2026-11-18T18:42:05",
+      "pending": false,
+      "pendingReason": "",
+      "notes": [],
+      "history": [
+        {
+          "at": "2026-11-18T18:42:05",
+          "by": "claude",
+          "action": "create",
+          "detail": "Créer le Game Pass x2 Money et le produit Tapis +1 niveau"
         }
       ]
     }
