@@ -1,0 +1,113 @@
+# STEAL A CRYSTAL!
+
+Jeu Roblox de minage dans une grotte de cristaux, développé avec Roblox Studio (place `126196802646495`).
+
+- **Roadmap ci-dessous**, mise à jour depuis l'app locale.
+- Le détail (bilan, checklist V1, priorités et sécurité) est dans [docs/ROADMAP.md](docs/ROADMAP.md).
+- La version modifiable est dans [roadmap-app/](roadmap-app/README.md).
+
+<!-- ROADMAP:START (généré par roadmap-app/roadmap.py export, ne pas modifier à la main) -->
+## Roadmap
+
+_Mise à jour : 18/11/2026 17:32 · 56 cartes · 0 à traiter._ Version modifiable : l'app locale `py roadmap-app/server.py` → http://127.0.0.1:8787
+
+### 🚦 Release candidate (avant V1) (15)
+
+- [ ] **Sauvegarder la place (v58)** — Arrêter le test de jeu, Ctrl+S, vérifier sac, chaussures et images d'auras. · _effort S · risque faible_
+- [ ] **Créer les 3 Game Pass des starter packs** — Starter 49 / Pro 149 / Elite 399, renseigner les ID dans Config.GamePasses (clés NoobPack, MediumPack, ProPack). · _effort S · risque faible_
+  - 🔒 Revérifier la propriété côté serveur à la connexion.
+- [ ] **Produits à ID 0 : créer ou cacher** — Pioches Rainbow / Ruby et packs de vitesse Speed25/100/500 affichent « Coming soon! ». · _effort S · risque faible_
+- [ ] **ProcessReceipt idempotent (bloquant)** — Mémoriser les PurchaseId, sauvegarder avant PurchaseGranted. · _effort S · risque faible_
+  - 🔒 Évite double livraison et paiement sans livraison.
+- [ ] **Verrou de session forcé : ne pas charger un profil vide** — Si le UpdateAsync de reprise échoue, DataManager.Load charge defaultData() puis écrase la progression : kick à la place. · _effort S · risque moyen_
+  - 🔒 Empêche l'écrasement de données via plusieurs serveurs.
+- [ ] **Badge Auto Collect** — Créer le badge et renseigner Config.PassBadges.AutoCollect (0 aujourd'hui). · _effort S · risque faible_
+- [ ] **Textures des meshes IA** — Sac Medium gris, Crystal Bag marron au lieu de vert : vérifier en jeu publié, regénérer si besoin. · _effort S · risque faible_
+- [ ] **Publier + accès API Studio** — Publier le jeu et activer « Enable Studio Access to API Services ». · _effort S · risque faible_
+- [ ] **Test serveur multi-joueurs réel** — DataStore réel, vrai achat de chaque game pass, badges, classement, gardes à plusieurs. · _effort M · risque faible_
+  - 🔒 Vérifier qu'aucun achat n'est simulé en production.
+- [ ] **Test sur mobile** — Performances, lisibilité, barre de vitesse tactile, tutoriel. · _effort S · risque faible_
+- [ ] **Page du jeu et questionnaire de maturité** — Icône, miniatures, description, genres, Maturity & Compliance. · _effort S · risque faible_
+- [ ] **Décider l'identité « STEAL »** — Le vol est désactivé (Steal.Enabled = false) : choix assumé pour la V1 ou changement de pitch. · _effort S · risque moyen_
+- [ ] **Musique des événements** — EventManager.MusicIds est vide. · _effort S · risque faible_
+- [ ] **Flags de test neutres en prod** — TestPurchasesInStudio, TestInfiniteMoneyInStudio, IsOwner=true dans Studio : contrôler avec un compte non admin. · _effort S · risque faible_
+  - 🔒 Aucun avantage gratuit hors Studio.
+- [ ] **Copie .rbxl après publication** — Garder une copie de la place dans le dépôt pour revenir en arrière. · _effort S · risque faible_
+
+### 🔧 En cours (0)
+
+_Vide._
+
+### 🛠️ P1 · Stabilité (8)
+
+- [ ] **1.1 Achats Robux fiables** — ProcessReceipt idempotent (PurchaseId), sauvegarde avant PurchaseGranted, revérifier les passes avec UserOwnsGamePassAsync. · _effort S · risque faible_
+  - 🔒 Le client ne déclenche jamais grantPass.
+- [ ] **1.2 Données des joueurs** — Corriger le repli defaultData, Version + migrations, sauvegarde de secours, sauvegarde à chaque achat, envisager ProfileStore. · _effort M · risque moyen_
+  - 🔒 Pas d'écrasement via multi-serveurs.
+- [ ] **1.3 Validation stricte des remotes** — Types, bornes, NaN, clés ; rate limit par action (Buy, Forge, Rebirth) ; vérifier Sprint et MineOre. · _effort M · risque faible_
+  - 🔒 Remotes à confiance zéro.
+- [ ] **1.4 Performances** — ~85 000 instances : MicroProfiler, LOD, moins de particules, coût IA des 28 gardes. · _effort M-L · risque moyen_
+  - 🔒 Un serveur saturé rate ses sauvegardes.
+- [ ] **1.5 Robustesse serveur** — Nettoyer les tables par joueur, pcall dans les boucles, remontée des erreurs. · _effort S · risque faible_
+  - 🔒 Journaux pour repérer les abus.
+- [ ] **1.6 Streaming** — Scripts clients tolérants aux objets non chargés, RequestStreamAroundAsync avant téléportation. · _effort S-M · risque faible_
+- [ ] **1.7 Anti-triche déplacement** — Anti-téléportation et anti-noclip serveur, dépôt validé dans la base. · _effort M · risque moyen_
+  - 🔒 Ne jamais croire la position du client ; rubber-band plutôt que kick.
+- [ ] **1.8 Admin : moindre privilège** — Journal des commandes, Money/Kick réservés au propriétaire, révocation entre serveurs. · _effort S · risque faible_
+  - 🔒 Un admin compromis ne ruine pas l'économie.
+
+### ✨ P2 · Features (9)
+
+- [ ] **2.1 Récompense quotidienne + codes** — Série de connexions et codes promo. · _effort S · risque faible_
+  - 🔒 Heure serveur uniquement, codes à usage unique.
+- [ ] **2.2 Quêtes et défis** — Journaliers / hebdomadaires. · _effort M · risque faible_
+  - 🔒 Progression comptée par le serveur.
+- [ ] **2.3 Remettre du « steal »** — Zone PvP, fenêtre de vol en événement, ou cristaux exposés. · _effort L · risque élevé_
+  - 🔒 Vol 100 % serveur, anti-farm de comptes alternatifs.
+- [ ] **2.4 Produits développeur** — Packs de vitesse, boost de chance, boost de revenus, skip de Forge. · _effort M · risque moyen_
+  - 🔒 Après 1.1 ; expiration des boosts côté serveur.
+- [ ] **2.5 Nouvelle zone et palier** — 6e mine, nouvelles pioches / sacs / auras, rebirths au-delà de 4. · _effort L · risque moyen_
+  - 🔒 Prix et revenus via Config, revérifiés serveur.
+- [ ] **2.6 Social** — Bonus d'amis, récompense de groupe, objectif de likes, serveurs privés. · _effort S-M · risque faible_
+  - 🔒 Appartenance au groupe vérifiée côté serveur.
+- [ ] **2.7 Classements et saisons** — Le plus riche, rebirths, mutations ; reset hebdomadaire. · _effort M · risque faible_
+  - 🔒 Valeurs issues du profil serveur, sauts anormaux plafonnés.
+- [ ] **2.8 Événements planifiés** — Un événement automatique toutes les 30 min. · _effort S · risque faible_
+- [ ] **2.9 Échanges entre joueurs** — Trading. · _effort L · risque élevé_
+  - 🔒 Échange atomique serveur, anti-duplication ; après 1.2.
+
+### 💡 Idées (0)
+
+_Vide._
+
+### ✅ Fait (24)
+
+<details><summary>Voir tout ce qui a été fait</summary>
+
+- [x] **Grotte, camp et 8 bases** — Camp en zone sûre avec 8 bases, boutiques, Forge, classement et zone d'événements.
+- [x] **5 mines de 660 studs** — Green Cave → Ice → Lava → Shadow → Galaxy, portes payantes revérifiées par le serveur.
+- [x] **Refonte visuelle réaliste** — Dalles, allée pavée, monument, étals, forge, stalactites, rails, étais, bassins de lave, arches de zone.
+- [x] **Secret Vaults (Shadow Mine)** — 2 salles secrètes derrière de faux murs.
+- [x] **Optimisations de la carte** — 510 lumières supprimées, 2 445 décors sans CanTouch/CanQuery, StreamingEnabled (bases Persistent, portes et gardes Atomic).
+- [x] **Boucle miner → base → revenus** — Sac, dépôt à la base, emplacements, revenus passifs, encaissement au chariot.
+- [x] **Cristaux, raretés, mutations** — Couleur = rareté, forme = zone, mutations naturelles ~8 %, repousse en 3 à 5 s.
+- [x] **9 pioches** — De Wooden à Cosmic, tenues lame vers l'avant, effets fixés à la pioche.
+- [x] **Sacs, bottes, auras, gardien de base** — 6 sacs, 6 bottes améliorables, 11 auras, gardien qui patrouille.
+- [x] **Tapis de course et barre de vitesse** — +10 à +3 000/s ; barre SLOW → MAX appliquée par le serveur (SpeedPct).
+- [x] **Forge, Rebirth, déblocages** — Base jusqu'à 9 emplacements, déblocage des mines, Forge, Rebirth ×1,5.
+- [x] **11 événements + portail** — Giant Crystal, Golden Mine, Meteor Crash, Guard Overload, etc.
+- [x] **IA des gardes et alarme** — 5-6 gardes par zone, alarme 0-100 % (CALM / SUSPICIOUS / HUNTED), détection assouplie.
+- [x] **5 modèles de gardes par zone** — Cowboy (R15), King Ice, DoomerBringer, Skeleton, casque spatial ; nom « &lt;Zone&gt; Guardian ».
+- [x] **Menus et R$ SHOP** — R$ SHOP, UPGRADES (Pickaxes / Bags / Boots / Auras), Crystals, Index, Rebirth, Admin, Settings.
+- [x] **Cartes Upgrades et images d'auras** — Cartes agrandies 3 par ligne, vitrine qui tourne, 11 images d'auras dessinées.
+- [x] **Textes stylés et notifications** — Dégradé brillant, contour teinté, notifications couleur du cristal, étiquettes au-dessus des cristaux.
+- [x] **HUD et réglages** — Barre de sac, barre d'alarme, étiquette de minage, collecteur, badges de passes, 5 réglages.
+- [x] **Tutoriel en 6 étapes avec flèche** — Flèche unique, bords assombris, consignes courtes, SKIP, fin sauvegardée côté serveur.
+- [x] **4 game passes en vente** — VIP, Auto Collect, x2 Speed Training, x2 Space, icônes et badges JPEG.
+- [x] **Onglet PACKS (3 starter packs)** — Starter R$ 49, Pro R$ 149, Elite R$ 399 avec les affiches (ID encore à 0).
+- [x] **Bottes et sacs générés par IA** — BootAssets / BagAssets, ajustés au pied et au dos ; anciens modèles dans ServerStorage.
+- [x] **Panneau admin** — Événements, annonce filtrée, morph, pouvoirs, gestion des admins par UserId.
+- [x] **Garde-fous serveur existants** — Remote Action unique avec pcall et rate limit 12/s, minage validé (pioche, cooldown, portée), anti-vitesse, UpdateAsync + verrou de session + autosave 90 s + BindToClose.
+
+</details>
+<!-- ROADMAP:END -->

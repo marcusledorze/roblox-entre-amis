@@ -7,4 +7,5 @@
   - Pour chaque carte « à traiter » : analyse-la, classe-la (colonne, effort, risque, œil sécurité) ou fais le travail demandé, puis lance `py roadmap-app/roadmap.py resolve <id> "<ce qui a été fait>" [--column ...]`.
   - Une carte qui demande de modifier le jeu ne se traite pas pendant un playtest : vérifie d'abord l'état de Studio.
   - Quand une fonctionnalité est livrée, déplace sa carte dans `done` avec une note.
+  - Après avoir modifié la roadmap, lance `py roadmap-app/roadmap.py export`, qui met à jour la page de lecture seule dans `README.md`. Commite ensuite `README.md` et `roadmap-app/data/roadmap.json` (après les tests), puis passe par une PR et un merge.
 - **Avant chaque commit** : `py -m unittest discover -s roadmap-app/tests` doit passer.
