@@ -1,5 +1,5 @@
 {
-  "rev": 82,
+  "rev": 83,
   "cards": [
     {
       "id": "9b3125929f",
@@ -1828,20 +1828,32 @@
       "effort": "S",
       "risk": "faible",
       "security": "Éviter des achats Robux sans contrepartie.",
-      "column": "rc",
-      "position": 15,
+      "column": "done",
+      "position": 36,
       "createdBy": "claude",
       "createdAt": "2026-11-18T19:49:27",
-      "updatedAt": "2026-11-18T19:49:27",
+      "updatedAt": "2026-11-18T20:09:53",
       "pending": false,
       "pendingReason": "",
-      "notes": [],
+      "notes": [
+        {
+          "at": "2026-11-18T20:09:53",
+          "by": "claude",
+          "text": "Les 8 Game Pass (7 skip a day + skip treadmill) sont hors vente, confirmé par Roblox (IsForSale = false)."
+        }
+      ],
       "history": [
         {
           "at": "2026-11-18T19:49:27",
           "by": "claude",
           "action": "create",
           "detail": "Mettre hors vente les 7 Game Pass « skip a day » et « skip treadmill »"
+        },
+        {
+          "at": "2026-11-18T20:09:53",
+          "by": "claude",
+          "action": "resolve",
+          "detail": "Les 8 Game Pass (7 skip a day + skip treadmill) sont hors vente, confirmé par Roblox (IsForSale = false)."
         }
       ]
     }
