@@ -1,5 +1,5 @@
 {
-  "rev": 56,
+  "rev": 59,
   "cards": [
     {
       "id": "9b3125929f",
@@ -1184,20 +1184,32 @@
       "effort": "S",
       "risk": "faible",
       "security": "Heure serveur uniquement, codes à usage unique.",
-      "column": "p2",
-      "position": 0,
+      "column": "done",
+      "position": 24,
       "createdBy": "claude",
       "createdAt": "2026-11-18T17:12:08",
-      "updatedAt": "2026-11-18T17:12:08",
+      "updatedAt": "2026-11-18T18:00:43",
       "pending": false,
       "pendingReason": "",
-      "notes": [],
+      "notes": [
+        {
+          "at": "2026-11-18T18:00:43",
+          "by": "claude",
+          "text": "Livré (place v66) : cadeaux quotidiens sur 7 jours (bouton cadeau à côté de l'engrenage, Prism Aura LIMITED au jour 7, jour calculé par le serveur) + onglet CODES dans le R$ SHOP (création réservée aux admins, codes plafonnés, 1 utilisation par joueur, anti force brute). Testé en Play, pas encore publié."
+        }
+      ],
       "history": [
         {
           "at": "2026-11-18T17:12:08",
           "by": "claude",
           "action": "create",
           "detail": "2.1 Récompense quotidienne + codes"
+        },
+        {
+          "at": "2026-11-18T18:00:43",
+          "by": "claude",
+          "action": "resolve",
+          "detail": "Livré (place v66) : cadeaux quotidiens sur 7 jours (bouton cadeau à côté de l'engrenage, Prism Aura LIMITED au jour 7, jour calculé par le serveur) + onglet CODES dans le R$ SHOP (création réservée aux admins, codes plafonnés, 1 utilisation par joueur, anti force brute). Testé en Play, pas encore pu"
         }
       ]
     },
@@ -1210,7 +1222,7 @@
       "risk": "faible",
       "security": "Progression comptée par le serveur.",
       "column": "p2",
-      "position": 1,
+      "position": 0,
       "createdBy": "claude",
       "createdAt": "2026-11-18T17:12:08",
       "updatedAt": "2026-11-18T17:12:08",
@@ -1235,7 +1247,7 @@
       "risk": "élevé",
       "security": "Vol 100 % serveur, anti-farm de comptes alternatifs.",
       "column": "p2",
-      "position": 2,
+      "position": 1,
       "createdBy": "claude",
       "createdAt": "2026-11-18T17:12:08",
       "updatedAt": "2026-11-18T17:12:08",
@@ -1260,7 +1272,7 @@
       "risk": "moyen",
       "security": "Après 1.1 ; expiration des boosts côté serveur.",
       "column": "p2",
-      "position": 3,
+      "position": 2,
       "createdBy": "claude",
       "createdAt": "2026-11-18T17:12:08",
       "updatedAt": "2026-11-18T17:12:08",
@@ -1285,7 +1297,7 @@
       "risk": "moyen",
       "security": "Prix et revenus via Config, revérifiés serveur.",
       "column": "p2",
-      "position": 4,
+      "position": 3,
       "createdBy": "claude",
       "createdAt": "2026-11-18T17:12:08",
       "updatedAt": "2026-11-18T17:12:08",
@@ -1310,7 +1322,7 @@
       "risk": "faible",
       "security": "Appartenance au groupe vérifiée côté serveur.",
       "column": "p2",
-      "position": 5,
+      "position": 4,
       "createdBy": "claude",
       "createdAt": "2026-11-18T17:12:08",
       "updatedAt": "2026-11-18T17:12:08",
@@ -1335,7 +1347,7 @@
       "risk": "faible",
       "security": "Valeurs issues du profil serveur, sauts anormaux plafonnés.",
       "column": "p2",
-      "position": 6,
+      "position": 5,
       "createdBy": "claude",
       "createdAt": "2026-11-18T17:12:08",
       "updatedAt": "2026-11-18T17:12:08",
@@ -1360,7 +1372,7 @@
       "risk": "faible",
       "security": "",
       "column": "p2",
-      "position": 7,
+      "position": 6,
       "createdBy": "claude",
       "createdAt": "2026-11-18T17:12:08",
       "updatedAt": "2026-11-18T17:12:08",
@@ -1385,7 +1397,7 @@
       "risk": "élevé",
       "security": "Échange atomique serveur, anti-duplication ; après 1.2.",
       "column": "p2",
-      "position": 8,
+      "position": 7,
       "createdBy": "claude",
       "createdAt": "2026-11-18T17:12:08",
       "updatedAt": "2026-11-18T17:12:08",
@@ -1398,6 +1410,56 @@
           "by": "claude",
           "action": "create",
           "detail": "2.9 Échanges entre joueurs"
+        }
+      ]
+    },
+    {
+      "id": "08b0574b0d",
+      "title": "Vérifier à l'écran la fenêtre DAILY GIFTS et l'onglet CODES",
+      "description": "Logique testée en Play, mais pas le rendu visuel : la fenêtre de Studio était réduite. Ouvrir le bouton cadeau et R$ SHOP > CODES.",
+      "theme": "Release",
+      "effort": "S",
+      "risk": "faible",
+      "security": "",
+      "column": "rc",
+      "position": 15,
+      "createdBy": "claude",
+      "createdAt": "2026-11-18T18:00:44",
+      "updatedAt": "2026-11-18T18:00:44",
+      "pending": false,
+      "pendingReason": "",
+      "notes": [],
+      "history": [
+        {
+          "at": "2026-11-18T18:00:44",
+          "by": "claude",
+          "action": "create",
+          "detail": "Vérifier à l'écran la fenêtre DAILY GIFTS et l'onglet CODES"
+        }
+      ]
+    },
+    {
+      "id": "82fd3cb64a",
+      "title": "Limite des codes très utilisés",
+      "description": "Un code à utilisations limitées écrit un compteur partagé (1 écriture toutes les 6 s par clé DataStore). Pour un code très populaire, préférer des codes sans limite ou un compteur réparti.",
+      "theme": "Stabilité",
+      "effort": "S",
+      "risk": "faible",
+      "security": "Le compteur reste côté serveur (UpdateAsync).",
+      "column": "p1",
+      "position": 8,
+      "createdBy": "claude",
+      "createdAt": "2026-11-18T18:00:44",
+      "updatedAt": "2026-11-18T18:00:44",
+      "pending": false,
+      "pendingReason": "",
+      "notes": [],
+      "history": [
+        {
+          "at": "2026-11-18T18:00:44",
+          "by": "claude",
+          "action": "create",
+          "detail": "Limite des codes très utilisés"
         }
       ]
     }

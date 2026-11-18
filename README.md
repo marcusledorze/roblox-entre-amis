@@ -10,9 +10,9 @@ Jeu Roblox de minage dans une grotte de cristaux, développé avec Roblox Studio
 <!-- ROADMAP:START (généré par roadmap-app/roadmap.py export, ne pas modifier à la main) -->
 ## Roadmap
 
-_Mise à jour : 18/11/2026 17:38 · 56 cartes · 0 à traiter._ Version modifiable : l'app locale `py roadmap-app/server.py` → http://127.0.0.1:8787
+_Mise à jour : 18/11/2026 18:01 · 58 cartes · 0 à traiter._ Version modifiable : l'app locale `py roadmap-app/server.py` → http://127.0.0.1:8787
 
-### 🚦 Release candidate (avant V1) (15)
+### 🚦 Release candidate (avant V1) (16)
 
 - [ ] **Sauvegarder la place (v58)** — Arrêter le test de jeu, Ctrl+S, vérifier sac, chaussures et images d'auras. · _effort S · risque faible_
 - [ ] **Créer les 3 Game Pass des starter packs** — Starter 49 / Pro 149 / Elite 399, renseigner les ID dans Config.GamePasses (clés NoobPack, MediumPack, ProPack). · _effort S · risque faible_
@@ -34,12 +34,13 @@ _Mise à jour : 18/11/2026 17:38 · 56 cartes · 0 à traiter._ Version modifiab
 - [ ] **Flags de test neutres en prod** — TestPurchasesInStudio, TestInfiniteMoneyInStudio, IsOwner=true dans Studio : contrôler avec un compte non admin. · _effort S · risque faible_
   - 🔒 Aucun avantage gratuit hors Studio.
 - [ ] **Copie .rbxl après publication** — Garder une copie de la place dans le dépôt pour revenir en arrière. · _effort S · risque faible_
+- [ ] **Vérifier à l'écran la fenêtre DAILY GIFTS et l'onglet CODES** — Logique testée en Play, mais pas le rendu visuel : la fenêtre de Studio était réduite. Ouvrir le bouton cadeau et R$ SHOP &gt; CODES. · _effort S · risque faible_
 
 ### 🔧 En cours (0)
 
 _Vide._
 
-### 🛠️ P1 · Stabilité (8)
+### 🛠️ P1 · Stabilité (9)
 
 - [ ] **1.1 Achats Robux fiables** — ProcessReceipt idempotent (PurchaseId), sauvegarde avant PurchaseGranted, revérifier les passes avec UserOwnsGamePassAsync. · _effort S · risque faible_
   - 🔒 Le client ne déclenche jamais grantPass.
@@ -56,11 +57,11 @@ _Vide._
   - 🔒 Ne jamais croire la position du client ; rubber-band plutôt que kick.
 - [ ] **1.8 Admin : moindre privilège** — Journal des commandes, Money/Kick réservés au propriétaire, révocation entre serveurs. · _effort S · risque faible_
   - 🔒 Un admin compromis ne ruine pas l'économie.
+- [ ] **Limite des codes très utilisés** — Un code à utilisations limitées écrit un compteur partagé (1 écriture toutes les 6 s par clé DataStore). Pour un code très populaire, préférer des codes sans limite ou un compteur réparti. · _effort S · risque faible_
+  - 🔒 Le compteur reste côté serveur (UpdateAsync).
 
-### ✨ P2 · Features (9)
+### ✨ P2 · Features (8)
 
-- [ ] **2.1 Récompense quotidienne + codes** — Série de connexions et codes promo. · _effort S · risque faible_
-  - 🔒 Heure serveur uniquement, codes à usage unique.
 - [ ] **2.2 Quêtes et défis** — Journaliers / hebdomadaires. · _effort M · risque faible_
   - 🔒 Progression comptée par le serveur.
 - [ ] **2.3 Remettre du « steal »** — Zone PvP, fenêtre de vol en événement, ou cristaux exposés. · _effort L · risque élevé_
@@ -81,7 +82,7 @@ _Vide._
 
 _Vide._
 
-### ✅ Fait (24)
+### ✅ Fait (25)
 
 <details><summary>Voir tout ce qui a été fait</summary>
 
@@ -109,6 +110,9 @@ _Vide._
 - [x] **Bottes et sacs générés par IA** — BootAssets / BagAssets, ajustés au pied et au dos ; anciens modèles dans ServerStorage.
 - [x] **Panneau admin** — Événements, annonce filtrée, morph, pouvoirs, gestion des admins par UserId.
 - [x] **Garde-fous serveur existants** — Remote Action unique avec pcall et rate limit 12/s, minage validé (pioche, cooldown, portée), anti-vitesse, UpdateAsync + verrou de session + autosave 90 s + BindToClose.
+- [x] **2.1 Récompense quotidienne + codes** — Série de connexions et codes promo. · _effort S · risque faible_
+  - 🔒 Heure serveur uniquement, codes à usage unique.
+  - 📝 Livré (place v66) : cadeaux quotidiens sur 7 jours (bouton cadeau à côté de l'engrenage, Prism Aura LIMITED au jour 7, jour calculé par le serveur) + onglet CODES dans le R$ SHOP (création réservée aux admins, codes plafonnés, 1 utilisation par joueur, anti force brute). Testé en Play, pas encore publié.
 
 </details>
 <!-- ROADMAP:END -->
