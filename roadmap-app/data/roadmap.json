@@ -1,0 +1,1405 @@
+{
+  "rev": 56,
+  "cards": [
+    {
+      "id": "9b3125929f",
+      "title": "Grotte, camp et 8 bases",
+      "description": "Camp en zone sûre avec 8 bases, boutiques, Forge, classement et zone d'événements.",
+      "theme": "Monde",
+      "effort": "",
+      "risk": "",
+      "security": "",
+      "column": "done",
+      "position": 0,
+      "createdBy": "claude",
+      "createdAt": "2026-11-18T17:12:07",
+      "updatedAt": "2026-11-18T17:12:07",
+      "pending": false,
+      "pendingReason": "",
+      "notes": [],
+      "history": [
+        {
+          "at": "2026-11-18T17:12:07",
+          "by": "claude",
+          "action": "create",
+          "detail": "Grotte, camp et 8 bases"
+        }
+      ]
+    },
+    {
+      "id": "5c82f17a23",
+      "title": "5 mines de 660 studs",
+      "description": "Green Cave → Ice → Lava → Shadow → Galaxy, portes payantes revérifiées par le serveur.",
+      "theme": "Monde",
+      "effort": "",
+      "risk": "",
+      "security": "",
+      "column": "done",
+      "position": 1,
+      "createdBy": "claude",
+      "createdAt": "2026-11-18T17:12:07",
+      "updatedAt": "2026-11-18T17:12:07",
+      "pending": false,
+      "pendingReason": "",
+      "notes": [],
+      "history": [
+        {
+          "at": "2026-11-18T17:12:07",
+          "by": "claude",
+          "action": "create",
+          "detail": "5 mines de 660 studs"
+        }
+      ]
+    },
+    {
+      "id": "1c003a8fa1",
+      "title": "Refonte visuelle réaliste",
+      "description": "Dalles, allée pavée, monument, étals, forge, stalactites, rails, étais, bassins de lave, arches de zone.",
+      "theme": "Monde",
+      "effort": "",
+      "risk": "",
+      "security": "",
+      "column": "done",
+      "position": 2,
+      "createdBy": "claude",
+      "createdAt": "2026-11-18T17:12:07",
+      "updatedAt": "2026-11-18T17:12:07",
+      "pending": false,
+      "pendingReason": "",
+      "notes": [],
+      "history": [
+        {
+          "at": "2026-11-18T17:12:07",
+          "by": "claude",
+          "action": "create",
+          "detail": "Refonte visuelle réaliste"
+        }
+      ]
+    },
+    {
+      "id": "45199abc95",
+      "title": "Secret Vaults (Shadow Mine)",
+      "description": "2 salles secrètes derrière de faux murs.",
+      "theme": "Monde",
+      "effort": "",
+      "risk": "",
+      "security": "",
+      "column": "done",
+      "position": 3,
+      "createdBy": "claude",
+      "createdAt": "2026-11-18T17:12:07",
+      "updatedAt": "2026-11-18T17:12:07",
+      "pending": false,
+      "pendingReason": "",
+      "notes": [],
+      "history": [
+        {
+          "at": "2026-11-18T17:12:07",
+          "by": "claude",
+          "action": "create",
+          "detail": "Secret Vaults (Shadow Mine)"
+        }
+      ]
+    },
+    {
+      "id": "d16a744ab1",
+      "title": "Optimisations de la carte",
+      "description": "510 lumières supprimées, 2 445 décors sans CanTouch/CanQuery, StreamingEnabled (bases Persistent, portes et gardes Atomic).",
+      "theme": "Perfs",
+      "effort": "",
+      "risk": "",
+      "security": "",
+      "column": "done",
+      "position": 4,
+      "createdBy": "claude",
+      "createdAt": "2026-11-18T17:12:07",
+      "updatedAt": "2026-11-18T17:12:07",
+      "pending": false,
+      "pendingReason": "",
+      "notes": [],
+      "history": [
+        {
+          "at": "2026-11-18T17:12:07",
+          "by": "claude",
+          "action": "create",
+          "detail": "Optimisations de la carte"
+        }
+      ]
+    },
+    {
+      "id": "448f40eb8c",
+      "title": "Boucle miner → base → revenus",
+      "description": "Sac, dépôt à la base, emplacements, revenus passifs, encaissement au chariot.",
+      "theme": "Gameplay",
+      "effort": "",
+      "risk": "",
+      "security": "",
+      "column": "done",
+      "position": 5,
+      "createdBy": "claude",
+      "createdAt": "2026-11-18T17:12:07",
+      "updatedAt": "2026-11-18T17:12:07",
+      "pending": false,
+      "pendingReason": "",
+      "notes": [],
+      "history": [
+        {
+          "at": "2026-11-18T17:12:07",
+          "by": "claude",
+          "action": "create",
+          "detail": "Boucle miner → base → revenus"
+        }
+      ]
+    },
+    {
+      "id": "04d966441f",
+      "title": "Cristaux, raretés, mutations",
+      "description": "Couleur = rareté, forme = zone, mutations naturelles ~8 %, repousse en 3 à 5 s.",
+      "theme": "Gameplay",
+      "effort": "",
+      "risk": "",
+      "security": "",
+      "column": "done",
+      "position": 6,
+      "createdBy": "claude",
+      "createdAt": "2026-11-18T17:12:07",
+      "updatedAt": "2026-11-18T17:12:07",
+      "pending": false,
+      "pendingReason": "",
+      "notes": [],
+      "history": [
+        {
+          "at": "2026-11-18T17:12:07",
+          "by": "claude",
+          "action": "create",
+          "detail": "Cristaux, raretés, mutations"
+        }
+      ]
+    },
+    {
+      "id": "876e945018",
+      "title": "9 pioches",
+      "description": "De Wooden à Cosmic, tenues lame vers l'avant, effets fixés à la pioche.",
+      "theme": "Gameplay",
+      "effort": "",
+      "risk": "",
+      "security": "",
+      "column": "done",
+      "position": 7,
+      "createdBy": "claude",
+      "createdAt": "2026-11-18T17:12:07",
+      "updatedAt": "2026-11-18T17:12:07",
+      "pending": false,
+      "pendingReason": "",
+      "notes": [],
+      "history": [
+        {
+          "at": "2026-11-18T17:12:07",
+          "by": "claude",
+          "action": "create",
+          "detail": "9 pioches"
+        }
+      ]
+    },
+    {
+      "id": "4fefd91644",
+      "title": "Sacs, bottes, auras, gardien de base",
+      "description": "6 sacs, 6 bottes améliorables, 11 auras, gardien qui patrouille.",
+      "theme": "Gameplay",
+      "effort": "",
+      "risk": "",
+      "security": "",
+      "column": "done",
+      "position": 8,
+      "createdBy": "claude",
+      "createdAt": "2026-11-18T17:12:07",
+      "updatedAt": "2026-11-18T17:12:07",
+      "pending": false,
+      "pendingReason": "",
+      "notes": [],
+      "history": [
+        {
+          "at": "2026-11-18T17:12:07",
+          "by": "claude",
+          "action": "create",
+          "detail": "Sacs, bottes, auras, gardien de base"
+        }
+      ]
+    },
+    {
+      "id": "63cb889d43",
+      "title": "Tapis de course et barre de vitesse",
+      "description": "+10 à +3 000/s ; barre SLOW → MAX appliquée par le serveur (SpeedPct).",
+      "theme": "Gameplay",
+      "effort": "",
+      "risk": "",
+      "security": "",
+      "column": "done",
+      "position": 9,
+      "createdBy": "claude",
+      "createdAt": "2026-11-18T17:12:07",
+      "updatedAt": "2026-11-18T17:12:07",
+      "pending": false,
+      "pendingReason": "",
+      "notes": [],
+      "history": [
+        {
+          "at": "2026-11-18T17:12:07",
+          "by": "claude",
+          "action": "create",
+          "detail": "Tapis de course et barre de vitesse"
+        }
+      ]
+    },
+    {
+      "id": "daa72b1d1c",
+      "title": "Forge, Rebirth, déblocages",
+      "description": "Base jusqu'à 9 emplacements, déblocage des mines, Forge, Rebirth ×1,5.",
+      "theme": "Gameplay",
+      "effort": "",
+      "risk": "",
+      "security": "",
+      "column": "done",
+      "position": 10,
+      "createdBy": "claude",
+      "createdAt": "2026-11-18T17:12:07",
+      "updatedAt": "2026-11-18T17:12:07",
+      "pending": false,
+      "pendingReason": "",
+      "notes": [],
+      "history": [
+        {
+          "at": "2026-11-18T17:12:07",
+          "by": "claude",
+          "action": "create",
+          "detail": "Forge, Rebirth, déblocages"
+        }
+      ]
+    },
+    {
+      "id": "072883c256",
+      "title": "11 événements + portail",
+      "description": "Giant Crystal, Golden Mine, Meteor Crash, Guard Overload, etc.",
+      "theme": "Gameplay",
+      "effort": "",
+      "risk": "",
+      "security": "",
+      "column": "done",
+      "position": 11,
+      "createdBy": "claude",
+      "createdAt": "2026-11-18T17:12:07",
+      "updatedAt": "2026-11-18T17:12:07",
+      "pending": false,
+      "pendingReason": "",
+      "notes": [],
+      "history": [
+        {
+          "at": "2026-11-18T17:12:07",
+          "by": "claude",
+          "action": "create",
+          "detail": "11 événements + portail"
+        }
+      ]
+    },
+    {
+      "id": "b900e24bae",
+      "title": "IA des gardes et alarme",
+      "description": "5-6 gardes par zone, alarme 0-100 % (CALM / SUSPICIOUS / HUNTED), détection assouplie.",
+      "theme": "Gardes",
+      "effort": "",
+      "risk": "",
+      "security": "",
+      "column": "done",
+      "position": 12,
+      "createdBy": "claude",
+      "createdAt": "2026-11-18T17:12:07",
+      "updatedAt": "2026-11-18T17:12:07",
+      "pending": false,
+      "pendingReason": "",
+      "notes": [],
+      "history": [
+        {
+          "at": "2026-11-18T17:12:07",
+          "by": "claude",
+          "action": "create",
+          "detail": "IA des gardes et alarme"
+        }
+      ]
+    },
+    {
+      "id": "c1b9f1b0fe",
+      "title": "5 modèles de gardes par zone",
+      "description": "Cowboy (R15), King Ice, DoomerBringer, Skeleton, casque spatial ; nom « <Zone> Guardian ».",
+      "theme": "Gardes",
+      "effort": "",
+      "risk": "",
+      "security": "",
+      "column": "done",
+      "position": 13,
+      "createdBy": "claude",
+      "createdAt": "2026-11-18T17:12:07",
+      "updatedAt": "2026-11-18T17:12:07",
+      "pending": false,
+      "pendingReason": "",
+      "notes": [],
+      "history": [
+        {
+          "at": "2026-11-18T17:12:07",
+          "by": "claude",
+          "action": "create",
+          "detail": "5 modèles de gardes par zone"
+        }
+      ]
+    },
+    {
+      "id": "4963b67569",
+      "title": "Menus et R$ SHOP",
+      "description": "R$ SHOP, UPGRADES (Pickaxes / Bags / Boots / Auras), Crystals, Index, Rebirth, Admin, Settings.",
+      "theme": "UI",
+      "effort": "",
+      "risk": "",
+      "security": "",
+      "column": "done",
+      "position": 14,
+      "createdBy": "claude",
+      "createdAt": "2026-11-18T17:12:07",
+      "updatedAt": "2026-11-18T17:12:07",
+      "pending": false,
+      "pendingReason": "",
+      "notes": [],
+      "history": [
+        {
+          "at": "2026-11-18T17:12:07",
+          "by": "claude",
+          "action": "create",
+          "detail": "Menus et R$ SHOP"
+        }
+      ]
+    },
+    {
+      "id": "d83ff94ad4",
+      "title": "Cartes Upgrades et images d'auras",
+      "description": "Cartes agrandies 3 par ligne, vitrine qui tourne, 11 images d'auras dessinées.",
+      "theme": "UI",
+      "effort": "",
+      "risk": "",
+      "security": "",
+      "column": "done",
+      "position": 15,
+      "createdBy": "claude",
+      "createdAt": "2026-11-18T17:12:07",
+      "updatedAt": "2026-11-18T17:12:07",
+      "pending": false,
+      "pendingReason": "",
+      "notes": [],
+      "history": [
+        {
+          "at": "2026-11-18T17:12:07",
+          "by": "claude",
+          "action": "create",
+          "detail": "Cartes Upgrades et images d'auras"
+        }
+      ]
+    },
+    {
+      "id": "e8d9d217b3",
+      "title": "Textes stylés et notifications",
+      "description": "Dégradé brillant, contour teinté, notifications couleur du cristal, étiquettes au-dessus des cristaux.",
+      "theme": "UI",
+      "effort": "",
+      "risk": "",
+      "security": "",
+      "column": "done",
+      "position": 16,
+      "createdBy": "claude",
+      "createdAt": "2026-11-18T17:12:07",
+      "updatedAt": "2026-11-18T17:12:07",
+      "pending": false,
+      "pendingReason": "",
+      "notes": [],
+      "history": [
+        {
+          "at": "2026-11-18T17:12:07",
+          "by": "claude",
+          "action": "create",
+          "detail": "Textes stylés et notifications"
+        }
+      ]
+    },
+    {
+      "id": "b96b12ebc1",
+      "title": "HUD et réglages",
+      "description": "Barre de sac, barre d'alarme, étiquette de minage, collecteur, badges de passes, 5 réglages.",
+      "theme": "UI",
+      "effort": "",
+      "risk": "",
+      "security": "",
+      "column": "done",
+      "position": 17,
+      "createdBy": "claude",
+      "createdAt": "2026-11-18T17:12:07",
+      "updatedAt": "2026-11-18T17:12:07",
+      "pending": false,
+      "pendingReason": "",
+      "notes": [],
+      "history": [
+        {
+          "at": "2026-11-18T17:12:07",
+          "by": "claude",
+          "action": "create",
+          "detail": "HUD et réglages"
+        }
+      ]
+    },
+    {
+      "id": "25b94cb210",
+      "title": "Tutoriel en 6 étapes avec flèche",
+      "description": "Flèche unique, bords assombris, consignes courtes, SKIP, fin sauvegardée côté serveur.",
+      "theme": "Tutoriel",
+      "effort": "",
+      "risk": "",
+      "security": "",
+      "column": "done",
+      "position": 18,
+      "createdBy": "claude",
+      "createdAt": "2026-11-18T17:12:07",
+      "updatedAt": "2026-11-18T17:12:07",
+      "pending": false,
+      "pendingReason": "",
+      "notes": [],
+      "history": [
+        {
+          "at": "2026-11-18T17:12:07",
+          "by": "claude",
+          "action": "create",
+          "detail": "Tutoriel en 6 étapes avec flèche"
+        }
+      ]
+    },
+    {
+      "id": "9bc0f439ea",
+      "title": "4 game passes en vente",
+      "description": "VIP, Auto Collect, x2 Speed Training, x2 Space, icônes et badges JPEG.",
+      "theme": "Robux",
+      "effort": "",
+      "risk": "",
+      "security": "",
+      "column": "done",
+      "position": 19,
+      "createdBy": "claude",
+      "createdAt": "2026-11-18T17:12:07",
+      "updatedAt": "2026-11-18T17:12:07",
+      "pending": false,
+      "pendingReason": "",
+      "notes": [],
+      "history": [
+        {
+          "at": "2026-11-18T17:12:07",
+          "by": "claude",
+          "action": "create",
+          "detail": "4 game passes en vente"
+        }
+      ]
+    },
+    {
+      "id": "6b8fc4a21d",
+      "title": "Onglet PACKS (3 starter packs)",
+      "description": "Starter R$ 49, Pro R$ 149, Elite R$ 399 avec les affiches (ID encore à 0).",
+      "theme": "Robux",
+      "effort": "",
+      "risk": "",
+      "security": "",
+      "column": "done",
+      "position": 20,
+      "createdBy": "claude",
+      "createdAt": "2026-11-18T17:12:07",
+      "updatedAt": "2026-11-18T17:12:07",
+      "pending": false,
+      "pendingReason": "",
+      "notes": [],
+      "history": [
+        {
+          "at": "2026-11-18T17:12:07",
+          "by": "claude",
+          "action": "create",
+          "detail": "Onglet PACKS (3 starter packs)"
+        }
+      ]
+    },
+    {
+      "id": "6d0d4727f9",
+      "title": "Bottes et sacs générés par IA",
+      "description": "BootAssets / BagAssets, ajustés au pied et au dos ; anciens modèles dans ServerStorage.",
+      "theme": "Assets 3D",
+      "effort": "",
+      "risk": "",
+      "security": "",
+      "column": "done",
+      "position": 21,
+      "createdBy": "claude",
+      "createdAt": "2026-11-18T17:12:07",
+      "updatedAt": "2026-11-18T17:12:07",
+      "pending": false,
+      "pendingReason": "",
+      "notes": [],
+      "history": [
+        {
+          "at": "2026-11-18T17:12:07",
+          "by": "claude",
+          "action": "create",
+          "detail": "Bottes et sacs générés par IA"
+        }
+      ]
+    },
+    {
+      "id": "b9890d4497",
+      "title": "Panneau admin",
+      "description": "Événements, annonce filtrée, morph, pouvoirs, gestion des admins par UserId.",
+      "theme": "Admin",
+      "effort": "",
+      "risk": "",
+      "security": "",
+      "column": "done",
+      "position": 22,
+      "createdBy": "claude",
+      "createdAt": "2026-11-18T17:12:07",
+      "updatedAt": "2026-11-18T17:12:07",
+      "pending": false,
+      "pendingReason": "",
+      "notes": [],
+      "history": [
+        {
+          "at": "2026-11-18T17:12:07",
+          "by": "claude",
+          "action": "create",
+          "detail": "Panneau admin"
+        }
+      ]
+    },
+    {
+      "id": "02bb049894",
+      "title": "Garde-fous serveur existants",
+      "description": "Remote Action unique avec pcall et rate limit 12/s, minage validé (pioche, cooldown, portée), anti-vitesse, UpdateAsync + verrou de session + autosave 90 s + BindToClose.",
+      "theme": "Sécurité",
+      "effort": "",
+      "risk": "",
+      "security": "",
+      "column": "done",
+      "position": 23,
+      "createdBy": "claude",
+      "createdAt": "2026-11-18T17:12:07",
+      "updatedAt": "2026-11-18T17:12:07",
+      "pending": false,
+      "pendingReason": "",
+      "notes": [],
+      "history": [
+        {
+          "at": "2026-11-18T17:12:07",
+          "by": "claude",
+          "action": "create",
+          "detail": "Garde-fous serveur existants"
+        }
+      ]
+    },
+    {
+      "id": "f9facde729",
+      "title": "Sauvegarder la place (v58)",
+      "description": "Arrêter le test de jeu, Ctrl+S, vérifier sac, chaussures et images d'auras.",
+      "theme": "Release",
+      "effort": "S",
+      "risk": "faible",
+      "security": "",
+      "column": "rc",
+      "position": 0,
+      "createdBy": "claude",
+      "createdAt": "2026-11-18T17:12:07",
+      "updatedAt": "2026-11-18T17:12:07",
+      "pending": false,
+      "pendingReason": "",
+      "notes": [],
+      "history": [
+        {
+          "at": "2026-11-18T17:12:07",
+          "by": "claude",
+          "action": "create",
+          "detail": "Sauvegarder la place (v58)"
+        }
+      ]
+    },
+    {
+      "id": "76434944f7",
+      "title": "Créer les 3 Game Pass des starter packs",
+      "description": "Starter 49 / Pro 149 / Elite 399, renseigner les ID dans Config.GamePasses (clés NoobPack, MediumPack, ProPack).",
+      "theme": "Release",
+      "effort": "S",
+      "risk": "faible",
+      "security": "Revérifier la propriété côté serveur à la connexion.",
+      "column": "rc",
+      "position": 1,
+      "createdBy": "claude",
+      "createdAt": "2026-11-18T17:12:07",
+      "updatedAt": "2026-11-18T17:12:07",
+      "pending": false,
+      "pendingReason": "",
+      "notes": [],
+      "history": [
+        {
+          "at": "2026-11-18T17:12:07",
+          "by": "claude",
+          "action": "create",
+          "detail": "Créer les 3 Game Pass des starter packs"
+        }
+      ]
+    },
+    {
+      "id": "650c085fb0",
+      "title": "Produits à ID 0 : créer ou cacher",
+      "description": "Pioches Rainbow / Ruby et packs de vitesse Speed25/100/500 affichent « Coming soon! ».",
+      "theme": "Release",
+      "effort": "S",
+      "risk": "faible",
+      "security": "",
+      "column": "rc",
+      "position": 2,
+      "createdBy": "claude",
+      "createdAt": "2026-11-18T17:12:07",
+      "updatedAt": "2026-11-18T17:12:07",
+      "pending": false,
+      "pendingReason": "",
+      "notes": [],
+      "history": [
+        {
+          "at": "2026-11-18T17:12:07",
+          "by": "claude",
+          "action": "create",
+          "detail": "Produits à ID 0 : créer ou cacher"
+        }
+      ]
+    },
+    {
+      "id": "6a74151bca",
+      "title": "ProcessReceipt idempotent (bloquant)",
+      "description": "Mémoriser les PurchaseId, sauvegarder avant PurchaseGranted.",
+      "theme": "Release",
+      "effort": "S",
+      "risk": "faible",
+      "security": "Évite double livraison et paiement sans livraison.",
+      "column": "rc",
+      "position": 3,
+      "createdBy": "claude",
+      "createdAt": "2026-11-18T17:12:07",
+      "updatedAt": "2026-11-18T17:12:07",
+      "pending": false,
+      "pendingReason": "",
+      "notes": [],
+      "history": [
+        {
+          "at": "2026-11-18T17:12:07",
+          "by": "claude",
+          "action": "create",
+          "detail": "ProcessReceipt idempotent (bloquant)"
+        }
+      ]
+    },
+    {
+      "id": "79c504d7bc",
+      "title": "Verrou de session forcé : ne pas charger un profil vide",
+      "description": "Si le UpdateAsync de reprise échoue, DataManager.Load charge defaultData() puis écrase la progression : kick à la place.",
+      "theme": "Release",
+      "effort": "S",
+      "risk": "moyen",
+      "security": "Empêche l'écrasement de données via plusieurs serveurs.",
+      "column": "rc",
+      "position": 4,
+      "createdBy": "claude",
+      "createdAt": "2026-11-18T17:12:07",
+      "updatedAt": "2026-11-18T17:12:07",
+      "pending": false,
+      "pendingReason": "",
+      "notes": [],
+      "history": [
+        {
+          "at": "2026-11-18T17:12:07",
+          "by": "claude",
+          "action": "create",
+          "detail": "Verrou de session forcé : ne pas charger un profil vide"
+        }
+      ]
+    },
+    {
+      "id": "3032efcc81",
+      "title": "Badge Auto Collect",
+      "description": "Créer le badge et renseigner Config.PassBadges.AutoCollect (0 aujourd'hui).",
+      "theme": "Release",
+      "effort": "S",
+      "risk": "faible",
+      "security": "",
+      "column": "rc",
+      "position": 5,
+      "createdBy": "claude",
+      "createdAt": "2026-11-18T17:12:07",
+      "updatedAt": "2026-11-18T17:12:07",
+      "pending": false,
+      "pendingReason": "",
+      "notes": [],
+      "history": [
+        {
+          "at": "2026-11-18T17:12:07",
+          "by": "claude",
+          "action": "create",
+          "detail": "Badge Auto Collect"
+        }
+      ]
+    },
+    {
+      "id": "a01c05eb3d",
+      "title": "Textures des meshes IA",
+      "description": "Sac Medium gris, Crystal Bag marron au lieu de vert : vérifier en jeu publié, regénérer si besoin.",
+      "theme": "Release",
+      "effort": "S",
+      "risk": "faible",
+      "security": "",
+      "column": "rc",
+      "position": 6,
+      "createdBy": "claude",
+      "createdAt": "2026-11-18T17:12:07",
+      "updatedAt": "2026-11-18T17:12:07",
+      "pending": false,
+      "pendingReason": "",
+      "notes": [],
+      "history": [
+        {
+          "at": "2026-11-18T17:12:07",
+          "by": "claude",
+          "action": "create",
+          "detail": "Textures des meshes IA"
+        }
+      ]
+    },
+    {
+      "id": "18d91b61d0",
+      "title": "Publier + accès API Studio",
+      "description": "Publier le jeu et activer « Enable Studio Access to API Services ».",
+      "theme": "Release",
+      "effort": "S",
+      "risk": "faible",
+      "security": "",
+      "column": "rc",
+      "position": 7,
+      "createdBy": "claude",
+      "createdAt": "2026-11-18T17:12:07",
+      "updatedAt": "2026-11-18T17:12:07",
+      "pending": false,
+      "pendingReason": "",
+      "notes": [],
+      "history": [
+        {
+          "at": "2026-11-18T17:12:07",
+          "by": "claude",
+          "action": "create",
+          "detail": "Publier + accès API Studio"
+        }
+      ]
+    },
+    {
+      "id": "bfe5a7d559",
+      "title": "Test serveur multi-joueurs réel",
+      "description": "DataStore réel, vrai achat de chaque game pass, badges, classement, gardes à plusieurs.",
+      "theme": "Release",
+      "effort": "M",
+      "risk": "faible",
+      "security": "Vérifier qu'aucun achat n'est simulé en production.",
+      "column": "rc",
+      "position": 8,
+      "createdBy": "claude",
+      "createdAt": "2026-11-18T17:12:07",
+      "updatedAt": "2026-11-18T17:12:07",
+      "pending": false,
+      "pendingReason": "",
+      "notes": [],
+      "history": [
+        {
+          "at": "2026-11-18T17:12:07",
+          "by": "claude",
+          "action": "create",
+          "detail": "Test serveur multi-joueurs réel"
+        }
+      ]
+    },
+    {
+      "id": "da28abffd4",
+      "title": "Test sur mobile",
+      "description": "Performances, lisibilité, barre de vitesse tactile, tutoriel.",
+      "theme": "Release",
+      "effort": "S",
+      "risk": "faible",
+      "security": "",
+      "column": "rc",
+      "position": 9,
+      "createdBy": "claude",
+      "createdAt": "2026-11-18T17:12:07",
+      "updatedAt": "2026-11-18T17:12:07",
+      "pending": false,
+      "pendingReason": "",
+      "notes": [],
+      "history": [
+        {
+          "at": "2026-11-18T17:12:07",
+          "by": "claude",
+          "action": "create",
+          "detail": "Test sur mobile"
+        }
+      ]
+    },
+    {
+      "id": "22c05b3e46",
+      "title": "Page du jeu et questionnaire de maturité",
+      "description": "Icône, miniatures, description, genres, Maturity & Compliance.",
+      "theme": "Release",
+      "effort": "S",
+      "risk": "faible",
+      "security": "",
+      "column": "rc",
+      "position": 10,
+      "createdBy": "claude",
+      "createdAt": "2026-11-18T17:12:07",
+      "updatedAt": "2026-11-18T17:12:07",
+      "pending": false,
+      "pendingReason": "",
+      "notes": [],
+      "history": [
+        {
+          "at": "2026-11-18T17:12:07",
+          "by": "claude",
+          "action": "create",
+          "detail": "Page du jeu et questionnaire de maturité"
+        }
+      ]
+    },
+    {
+      "id": "b01bc1154a",
+      "title": "Décider l'identité « STEAL »",
+      "description": "Le vol est désactivé (Steal.Enabled = false) : choix assumé pour la V1 ou changement de pitch.",
+      "theme": "Release",
+      "effort": "S",
+      "risk": "moyen",
+      "security": "",
+      "column": "rc",
+      "position": 11,
+      "createdBy": "claude",
+      "createdAt": "2026-11-18T17:12:07",
+      "updatedAt": "2026-11-18T17:12:07",
+      "pending": false,
+      "pendingReason": "",
+      "notes": [],
+      "history": [
+        {
+          "at": "2026-11-18T17:12:07",
+          "by": "claude",
+          "action": "create",
+          "detail": "Décider l'identité « STEAL »"
+        }
+      ]
+    },
+    {
+      "id": "33829ea43d",
+      "title": "Musique des événements",
+      "description": "EventManager.MusicIds est vide.",
+      "theme": "Release",
+      "effort": "S",
+      "risk": "faible",
+      "security": "",
+      "column": "rc",
+      "position": 12,
+      "createdBy": "claude",
+      "createdAt": "2026-11-18T17:12:07",
+      "updatedAt": "2026-11-18T17:12:07",
+      "pending": false,
+      "pendingReason": "",
+      "notes": [],
+      "history": [
+        {
+          "at": "2026-11-18T17:12:07",
+          "by": "claude",
+          "action": "create",
+          "detail": "Musique des événements"
+        }
+      ]
+    },
+    {
+      "id": "87c70cbd26",
+      "title": "Flags de test neutres en prod",
+      "description": "TestPurchasesInStudio, TestInfiniteMoneyInStudio, IsOwner=true dans Studio : contrôler avec un compte non admin.",
+      "theme": "Release",
+      "effort": "S",
+      "risk": "faible",
+      "security": "Aucun avantage gratuit hors Studio.",
+      "column": "rc",
+      "position": 13,
+      "createdBy": "claude",
+      "createdAt": "2026-11-18T17:12:07",
+      "updatedAt": "2026-11-18T17:12:07",
+      "pending": false,
+      "pendingReason": "",
+      "notes": [],
+      "history": [
+        {
+          "at": "2026-11-18T17:12:07",
+          "by": "claude",
+          "action": "create",
+          "detail": "Flags de test neutres en prod"
+        }
+      ]
+    },
+    {
+      "id": "49fcb3066e",
+      "title": "Copie .rbxl après publication",
+      "description": "Garder une copie de la place dans le dépôt pour revenir en arrière.",
+      "theme": "Release",
+      "effort": "S",
+      "risk": "faible",
+      "security": "",
+      "column": "rc",
+      "position": 14,
+      "createdBy": "claude",
+      "createdAt": "2026-11-18T17:12:07",
+      "updatedAt": "2026-11-18T17:12:07",
+      "pending": false,
+      "pendingReason": "",
+      "notes": [],
+      "history": [
+        {
+          "at": "2026-11-18T17:12:07",
+          "by": "claude",
+          "action": "create",
+          "detail": "Copie .rbxl après publication"
+        }
+      ]
+    },
+    {
+      "id": "de8db36395",
+      "title": "1.1 Achats Robux fiables",
+      "description": "ProcessReceipt idempotent (PurchaseId), sauvegarde avant PurchaseGranted, revérifier les passes avec UserOwnsGamePassAsync.",
+      "theme": "Stabilité",
+      "effort": "S",
+      "risk": "faible",
+      "security": "Le client ne déclenche jamais grantPass.",
+      "column": "p1",
+      "position": 0,
+      "createdBy": "claude",
+      "createdAt": "2026-11-18T17:12:07",
+      "updatedAt": "2026-11-18T17:12:07",
+      "pending": false,
+      "pendingReason": "",
+      "notes": [],
+      "history": [
+        {
+          "at": "2026-11-18T17:12:07",
+          "by": "claude",
+          "action": "create",
+          "detail": "1.1 Achats Robux fiables"
+        }
+      ]
+    },
+    {
+      "id": "dbeff38f15",
+      "title": "1.2 Données des joueurs",
+      "description": "Corriger le repli defaultData, Version + migrations, sauvegarde de secours, sauvegarde à chaque achat, envisager ProfileStore.",
+      "theme": "Stabilité",
+      "effort": "M",
+      "risk": "moyen",
+      "security": "Pas d'écrasement via multi-serveurs.",
+      "column": "p1",
+      "position": 1,
+      "createdBy": "claude",
+      "createdAt": "2026-11-18T17:12:07",
+      "updatedAt": "2026-11-18T17:12:07",
+      "pending": false,
+      "pendingReason": "",
+      "notes": [],
+      "history": [
+        {
+          "at": "2026-11-18T17:12:07",
+          "by": "claude",
+          "action": "create",
+          "detail": "1.2 Données des joueurs"
+        }
+      ]
+    },
+    {
+      "id": "e2577ddd35",
+      "title": "1.3 Validation stricte des remotes",
+      "description": "Types, bornes, NaN, clés ; rate limit par action (Buy, Forge, Rebirth) ; vérifier Sprint et MineOre.",
+      "theme": "Stabilité",
+      "effort": "M",
+      "risk": "faible",
+      "security": "Remotes à confiance zéro.",
+      "column": "p1",
+      "position": 2,
+      "createdBy": "claude",
+      "createdAt": "2026-11-18T17:12:08",
+      "updatedAt": "2026-11-18T17:12:08",
+      "pending": false,
+      "pendingReason": "",
+      "notes": [],
+      "history": [
+        {
+          "at": "2026-11-18T17:12:08",
+          "by": "claude",
+          "action": "create",
+          "detail": "1.3 Validation stricte des remotes"
+        }
+      ]
+    },
+    {
+      "id": "a6bf89699f",
+      "title": "1.4 Performances",
+      "description": "~85 000 instances : MicroProfiler, LOD, moins de particules, coût IA des 28 gardes.",
+      "theme": "Stabilité",
+      "effort": "M-L",
+      "risk": "moyen",
+      "security": "Un serveur saturé rate ses sauvegardes.",
+      "column": "p1",
+      "position": 3,
+      "createdBy": "claude",
+      "createdAt": "2026-11-18T17:12:08",
+      "updatedAt": "2026-11-18T17:12:08",
+      "pending": false,
+      "pendingReason": "",
+      "notes": [],
+      "history": [
+        {
+          "at": "2026-11-18T17:12:08",
+          "by": "claude",
+          "action": "create",
+          "detail": "1.4 Performances"
+        }
+      ]
+    },
+    {
+      "id": "7a819b06ee",
+      "title": "1.5 Robustesse serveur",
+      "description": "Nettoyer les tables par joueur, pcall dans les boucles, remontée des erreurs.",
+      "theme": "Stabilité",
+      "effort": "S",
+      "risk": "faible",
+      "security": "Journaux pour repérer les abus.",
+      "column": "p1",
+      "position": 4,
+      "createdBy": "claude",
+      "createdAt": "2026-11-18T17:12:08",
+      "updatedAt": "2026-11-18T17:12:08",
+      "pending": false,
+      "pendingReason": "",
+      "notes": [],
+      "history": [
+        {
+          "at": "2026-11-18T17:12:08",
+          "by": "claude",
+          "action": "create",
+          "detail": "1.5 Robustesse serveur"
+        }
+      ]
+    },
+    {
+      "id": "8713c5ab94",
+      "title": "1.6 Streaming",
+      "description": "Scripts clients tolérants aux objets non chargés, RequestStreamAroundAsync avant téléportation.",
+      "theme": "Stabilité",
+      "effort": "S-M",
+      "risk": "faible",
+      "security": "",
+      "column": "p1",
+      "position": 5,
+      "createdBy": "claude",
+      "createdAt": "2026-11-18T17:12:08",
+      "updatedAt": "2026-11-18T17:12:08",
+      "pending": false,
+      "pendingReason": "",
+      "notes": [],
+      "history": [
+        {
+          "at": "2026-11-18T17:12:08",
+          "by": "claude",
+          "action": "create",
+          "detail": "1.6 Streaming"
+        }
+      ]
+    },
+    {
+      "id": "8190fde9d8",
+      "title": "1.7 Anti-triche déplacement",
+      "description": "Anti-téléportation et anti-noclip serveur, dépôt validé dans la base.",
+      "theme": "Stabilité",
+      "effort": "M",
+      "risk": "moyen",
+      "security": "Ne jamais croire la position du client ; rubber-band plutôt que kick.",
+      "column": "p1",
+      "position": 6,
+      "createdBy": "claude",
+      "createdAt": "2026-11-18T17:12:08",
+      "updatedAt": "2026-11-18T17:12:08",
+      "pending": false,
+      "pendingReason": "",
+      "notes": [],
+      "history": [
+        {
+          "at": "2026-11-18T17:12:08",
+          "by": "claude",
+          "action": "create",
+          "detail": "1.7 Anti-triche déplacement"
+        }
+      ]
+    },
+    {
+      "id": "3622d97244",
+      "title": "1.8 Admin : moindre privilège",
+      "description": "Journal des commandes, Money/Kick réservés au propriétaire, révocation entre serveurs.",
+      "theme": "Stabilité",
+      "effort": "S",
+      "risk": "faible",
+      "security": "Un admin compromis ne ruine pas l'économie.",
+      "column": "p1",
+      "position": 7,
+      "createdBy": "claude",
+      "createdAt": "2026-11-18T17:12:08",
+      "updatedAt": "2026-11-18T17:12:08",
+      "pending": false,
+      "pendingReason": "",
+      "notes": [],
+      "history": [
+        {
+          "at": "2026-11-18T17:12:08",
+          "by": "claude",
+          "action": "create",
+          "detail": "1.8 Admin : moindre privilège"
+        }
+      ]
+    },
+    {
+      "id": "6815fdf785",
+      "title": "2.1 Récompense quotidienne + codes",
+      "description": "Série de connexions et codes promo.",
+      "theme": "Feature",
+      "effort": "S",
+      "risk": "faible",
+      "security": "Heure serveur uniquement, codes à usage unique.",
+      "column": "p2",
+      "position": 0,
+      "createdBy": "claude",
+      "createdAt": "2026-11-18T17:12:08",
+      "updatedAt": "2026-11-18T17:12:08",
+      "pending": false,
+      "pendingReason": "",
+      "notes": [],
+      "history": [
+        {
+          "at": "2026-11-18T17:12:08",
+          "by": "claude",
+          "action": "create",
+          "detail": "2.1 Récompense quotidienne + codes"
+        }
+      ]
+    },
+    {
+      "id": "ef2825b880",
+      "title": "2.2 Quêtes et défis",
+      "description": "Journaliers / hebdomadaires.",
+      "theme": "Feature",
+      "effort": "M",
+      "risk": "faible",
+      "security": "Progression comptée par le serveur.",
+      "column": "p2",
+      "position": 1,
+      "createdBy": "claude",
+      "createdAt": "2026-11-18T17:12:08",
+      "updatedAt": "2026-11-18T17:12:08",
+      "pending": false,
+      "pendingReason": "",
+      "notes": [],
+      "history": [
+        {
+          "at": "2026-11-18T17:12:08",
+          "by": "claude",
+          "action": "create",
+          "detail": "2.2 Quêtes et défis"
+        }
+      ]
+    },
+    {
+      "id": "bc2ac410a8",
+      "title": "2.3 Remettre du « steal »",
+      "description": "Zone PvP, fenêtre de vol en événement, ou cristaux exposés.",
+      "theme": "Feature",
+      "effort": "L",
+      "risk": "élevé",
+      "security": "Vol 100 % serveur, anti-farm de comptes alternatifs.",
+      "column": "p2",
+      "position": 2,
+      "createdBy": "claude",
+      "createdAt": "2026-11-18T17:12:08",
+      "updatedAt": "2026-11-18T17:12:08",
+      "pending": false,
+      "pendingReason": "",
+      "notes": [],
+      "history": [
+        {
+          "at": "2026-11-18T17:12:08",
+          "by": "claude",
+          "action": "create",
+          "detail": "2.3 Remettre du « steal »"
+        }
+      ]
+    },
+    {
+      "id": "65a1c547a1",
+      "title": "2.4 Produits développeur",
+      "description": "Packs de vitesse, boost de chance, boost de revenus, skip de Forge.",
+      "theme": "Feature",
+      "effort": "M",
+      "risk": "moyen",
+      "security": "Après 1.1 ; expiration des boosts côté serveur.",
+      "column": "p2",
+      "position": 3,
+      "createdBy": "claude",
+      "createdAt": "2026-11-18T17:12:08",
+      "updatedAt": "2026-11-18T17:12:08",
+      "pending": false,
+      "pendingReason": "",
+      "notes": [],
+      "history": [
+        {
+          "at": "2026-11-18T17:12:08",
+          "by": "claude",
+          "action": "create",
+          "detail": "2.4 Produits développeur"
+        }
+      ]
+    },
+    {
+      "id": "fe73715f38",
+      "title": "2.5 Nouvelle zone et palier",
+      "description": "6e mine, nouvelles pioches / sacs / auras, rebirths au-delà de 4.",
+      "theme": "Feature",
+      "effort": "L",
+      "risk": "moyen",
+      "security": "Prix et revenus via Config, revérifiés serveur.",
+      "column": "p2",
+      "position": 4,
+      "createdBy": "claude",
+      "createdAt": "2026-11-18T17:12:08",
+      "updatedAt": "2026-11-18T17:12:08",
+      "pending": false,
+      "pendingReason": "",
+      "notes": [],
+      "history": [
+        {
+          "at": "2026-11-18T17:12:08",
+          "by": "claude",
+          "action": "create",
+          "detail": "2.5 Nouvelle zone et palier"
+        }
+      ]
+    },
+    {
+      "id": "a9a3596795",
+      "title": "2.6 Social",
+      "description": "Bonus d'amis, récompense de groupe, objectif de likes, serveurs privés.",
+      "theme": "Feature",
+      "effort": "S-M",
+      "risk": "faible",
+      "security": "Appartenance au groupe vérifiée côté serveur.",
+      "column": "p2",
+      "position": 5,
+      "createdBy": "claude",
+      "createdAt": "2026-11-18T17:12:08",
+      "updatedAt": "2026-11-18T17:12:08",
+      "pending": false,
+      "pendingReason": "",
+      "notes": [],
+      "history": [
+        {
+          "at": "2026-11-18T17:12:08",
+          "by": "claude",
+          "action": "create",
+          "detail": "2.6 Social"
+        }
+      ]
+    },
+    {
+      "id": "09f491e4fb",
+      "title": "2.7 Classements et saisons",
+      "description": "Le plus riche, rebirths, mutations ; reset hebdomadaire.",
+      "theme": "Feature",
+      "effort": "M",
+      "risk": "faible",
+      "security": "Valeurs issues du profil serveur, sauts anormaux plafonnés.",
+      "column": "p2",
+      "position": 6,
+      "createdBy": "claude",
+      "createdAt": "2026-11-18T17:12:08",
+      "updatedAt": "2026-11-18T17:12:08",
+      "pending": false,
+      "pendingReason": "",
+      "notes": [],
+      "history": [
+        {
+          "at": "2026-11-18T17:12:08",
+          "by": "claude",
+          "action": "create",
+          "detail": "2.7 Classements et saisons"
+        }
+      ]
+    },
+    {
+      "id": "81232248f5",
+      "title": "2.8 Événements planifiés",
+      "description": "Un événement automatique toutes les 30 min.",
+      "theme": "Feature",
+      "effort": "S",
+      "risk": "faible",
+      "security": "",
+      "column": "p2",
+      "position": 7,
+      "createdBy": "claude",
+      "createdAt": "2026-11-18T17:12:08",
+      "updatedAt": "2026-11-18T17:12:08",
+      "pending": false,
+      "pendingReason": "",
+      "notes": [],
+      "history": [
+        {
+          "at": "2026-11-18T17:12:08",
+          "by": "claude",
+          "action": "create",
+          "detail": "2.8 Événements planifiés"
+        }
+      ]
+    },
+    {
+      "id": "fba2f377ce",
+      "title": "2.9 Échanges entre joueurs",
+      "description": "Trading.",
+      "theme": "Feature",
+      "effort": "L",
+      "risk": "élevé",
+      "security": "Échange atomique serveur, anti-duplication ; après 1.2.",
+      "column": "p2",
+      "position": 8,
+      "createdBy": "claude",
+      "createdAt": "2026-11-18T17:12:08",
+      "updatedAt": "2026-11-18T17:12:08",
+      "pending": false,
+      "pendingReason": "",
+      "notes": [],
+      "history": [
+        {
+          "at": "2026-11-18T17:12:08",
+          "by": "claude",
+          "action": "create",
+          "detail": "2.9 Échanges entre joueurs"
+        }
+      ]
+    }
+  ]
+}
