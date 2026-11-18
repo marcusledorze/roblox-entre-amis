@@ -1,5 +1,5 @@
 {
-  "rev": 72,
+  "rev": 74,
   "cards": [
     {
       "id": "9b3125929f",
@@ -1736,16 +1736,53 @@
       "position": 17,
       "createdBy": "claude",
       "createdAt": "2026-11-18T18:42:05",
-      "updatedAt": "2026-11-18T18:42:05",
+      "updatedAt": "2026-11-18T19:02:59",
       "pending": false,
       "pendingReason": "",
-      "notes": [],
+      "notes": [
+        {
+          "at": "2026-11-18T19:02:59",
+          "by": "claude",
+          "text": "x2 Money branché (Game Pass 2093541135, R$ 259, place v73). « skip treadmill » (2092935142) est un Game Pass : il faut un Developer Product pour le tapis aussi. Création automatique refusée : la permission developer-product:write n'est pas accordée."
+        }
+      ],
       "history": [
         {
           "at": "2026-11-18T18:42:05",
           "by": "claude",
           "action": "create",
           "detail": "Créer le Game Pass x2 Money et le produit Tapis +1 niveau"
+        },
+        {
+          "at": "2026-11-18T19:02:59",
+          "by": "claude",
+          "action": "resolve",
+          "detail": "x2 Money branché (Game Pass 2093541135, R$ 259, place v73). « skip treadmill » (2092935142) est un Game Pass : il faut un Developer Product pour le tapis aussi. Création automatique refusée : la permission developer-product:write n'est pas accordée."
+        }
+      ]
+    },
+    {
+      "id": "e8bb7706ad",
+      "title": "Mettre hors vente le Game Pass « skip treadmill »",
+      "description": "Le Game Pass 2092935142 est en vente mais ne donne rien dans le jeu : le désactiver sur le Creator Dashboard.",
+      "theme": "Release",
+      "effort": "S",
+      "risk": "faible",
+      "security": "Éviter un achat Robux sans contrepartie.",
+      "column": "rc",
+      "position": 18,
+      "createdBy": "claude",
+      "createdAt": "2026-11-18T19:02:59",
+      "updatedAt": "2026-11-18T19:02:59",
+      "pending": false,
+      "pendingReason": "",
+      "notes": [],
+      "history": [
+        {
+          "at": "2026-11-18T19:02:59",
+          "by": "claude",
+          "action": "create",
+          "detail": "Mettre hors vente le Game Pass « skip treadmill »"
         }
       ]
     }
