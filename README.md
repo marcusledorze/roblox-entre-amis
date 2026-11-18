@@ -10,7 +10,7 @@ Jeu Roblox de minage dans une grotte de cristaux, développé avec Roblox Studio
 <!-- ROADMAP:START (généré par roadmap-app/roadmap.py export, ne pas modifier à la main) -->
 ## Roadmap
 
-_Mise à jour : 18/11/2026 18:01 · 58 cartes · 0 à traiter._ Version modifiable : l'app locale `py roadmap-app/server.py` → http://127.0.0.1:8787
+_Mise à jour : 18/11/2026 18:23 · 63 cartes · 0 à traiter._ Version modifiable : l'app locale `py roadmap-app/server.py` → http://127.0.0.1:8787
 
 ### 🚦 Release candidate (avant V1) (16)
 
@@ -34,7 +34,7 @@ _Mise à jour : 18/11/2026 18:01 · 58 cartes · 0 à traiter._ Version modifiab
 - [ ] **Flags de test neutres en prod** — TestPurchasesInStudio, TestInfiniteMoneyInStudio, IsOwner=true dans Studio : contrôler avec un compte non admin. · _effort S · risque faible_
   - 🔒 Aucun avantage gratuit hors Studio.
 - [ ] **Copie .rbxl après publication** — Garder une copie de la place dans le dépôt pour revenir en arrière. · _effort S · risque faible_
-- [ ] **Vérifier à l'écran la fenêtre DAILY GIFTS et l'onglet CODES** — Logique testée en Play, mais pas le rendu visuel : la fenêtre de Studio était réduite. Ouvrir le bouton cadeau et R$ SHOP &gt; CODES. · _effort S · risque faible_
+- [ ] **Créer le produit Robux « Skip a Day » (49 R$)** — Le créer sur le Creator Dashboard (produit développeur), puis renseigner son ID dans Config.DailySkip.Id. En attendant : gratuit dans Studio, « Coming soon! » dans le jeu publié. · _effort S · risque faible_
 
 ### 🔧 En cours (0)
 
@@ -78,11 +78,11 @@ _Vide._
 - [ ] **2.9 Échanges entre joueurs** — Trading. · _effort L · risque élevé_
   - 🔒 Échange atomique serveur, anti-duplication ; après 1.2.
 
-### 💡 Idées (0)
+### 💡 Idées (1)
 
-_Vide._
+- [ ] **Images d'auras sans anneaux au sol** — Les 11 anciennes images de cartes d'aura ont encore des anneaux au sol : les redessiner dans le style de la Prism si on veut tout uniformiser.
 
-### ✅ Fait (25)
+### ✅ Fait (29)
 
 <details><summary>Voir tout ce qui a été fait</summary>
 
@@ -113,6 +113,12 @@ _Vide._
 - [x] **2.1 Récompense quotidienne + codes** — Série de connexions et codes promo. · _effort S · risque faible_
   - 🔒 Heure serveur uniquement, codes à usage unique.
   - 📝 Livré (place v66) : cadeaux quotidiens sur 7 jours (bouton cadeau à côté de l'engrenage, Prism Aura LIMITED au jour 7, jour calculé par le serveur) + onglet CODES dans le R$ SHOP (création réservée aux admins, codes plafonnés, 1 utilisation par joueur, anti force brute). Testé en Play, pas encore publié.
+- [x] **Vérifier à l'écran la fenêtre DAILY GIFTS et l'onglet CODES** — Logique testée en Play, mais pas le rendu visuel : la fenêtre de Studio était réduite. Ouvrir le bouton cadeau et R$ SHOP &gt; CODES. · _effort S · risque faible_
+  - 📝 Vérifié à l'écran en Play : fenêtre DAILY GIFTS refaite et onglet CODES lisibles (place v69).
+- [x] **Cadeaux v2 : grosses récompenses + SKIP 49 R$** — Jours 2/4/6 : +500 / +1 000 / +5 000 de vitesse, argent jusqu'à 10M au jour 7. Bouton SKIP (49 R$ par jour sauté). Nouvelle fenêtre avec cartes colorées, pièces d'or et chaussures, barre de série en 7 points. Testé en Play (7 jours via SKIP).
+  - 🔒 Reçu Robux enregistré dans la sauvegarde du joueur (PurchaseId) et sauvegardé avant validation : jamais donné deux fois.
+- [x] **Auras plus belles** — Contour lumineux et anneaux néon retirés, remplacés par des volutes d'énergie. Image dédiée pour la Prism Aura.
+- [x] **Formulaire admin CREATE CODE plus clair** — 3 étapes numérotées (nom, récompenses avec icônes et choix d'aura, limites), aperçu en direct de ce que les joueurs recevront.
 
 </details>
 <!-- ROADMAP:END -->

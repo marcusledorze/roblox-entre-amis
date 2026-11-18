@@ -1,5 +1,5 @@
 {
-  "rev": 59,
+  "rev": 65,
   "cards": [
     {
       "id": "9b3125929f",
@@ -1421,20 +1421,32 @@
       "effort": "S",
       "risk": "faible",
       "security": "",
-      "column": "rc",
-      "position": 15,
+      "column": "done",
+      "position": 25,
       "createdBy": "claude",
       "createdAt": "2026-11-18T18:00:44",
-      "updatedAt": "2026-11-18T18:00:44",
+      "updatedAt": "2026-11-18T18:22:54",
       "pending": false,
       "pendingReason": "",
-      "notes": [],
+      "notes": [
+        {
+          "at": "2026-11-18T18:22:54",
+          "by": "claude",
+          "text": "Vérifié à l'écran en Play : fenêtre DAILY GIFTS refaite et onglet CODES lisibles (place v69)."
+        }
+      ],
       "history": [
         {
           "at": "2026-11-18T18:00:44",
           "by": "claude",
           "action": "create",
           "detail": "Vérifier à l'écran la fenêtre DAILY GIFTS et l'onglet CODES"
+        },
+        {
+          "at": "2026-11-18T18:22:54",
+          "by": "claude",
+          "action": "resolve",
+          "detail": "Vérifié à l'écran en Play : fenêtre DAILY GIFTS refaite et onglet CODES lisibles (place v69)."
         }
       ]
     },
@@ -1460,6 +1472,131 @@
           "by": "claude",
           "action": "create",
           "detail": "Limite des codes très utilisés"
+        }
+      ]
+    },
+    {
+      "id": "1706ead225",
+      "title": "Cadeaux v2 : grosses récompenses + SKIP 49 R$",
+      "description": "Jours 2/4/6 : +500 / +1 000 / +5 000 de vitesse, argent jusqu'à 10M au jour 7. Bouton SKIP (49 R$ par jour sauté). Nouvelle fenêtre avec cartes colorées, pièces d'or et chaussures, barre de série en 7 points. Testé en Play (7 jours via SKIP).",
+      "theme": "Robux",
+      "effort": "",
+      "risk": "",
+      "security": "Reçu Robux enregistré dans la sauvegarde du joueur (PurchaseId) et sauvegardé avant validation : jamais donné deux fois.",
+      "column": "done",
+      "position": 26,
+      "createdBy": "claude",
+      "createdAt": "2026-11-18T18:22:55",
+      "updatedAt": "2026-11-18T18:22:55",
+      "pending": false,
+      "pendingReason": "",
+      "notes": [],
+      "history": [
+        {
+          "at": "2026-11-18T18:22:55",
+          "by": "claude",
+          "action": "create",
+          "detail": "Cadeaux v2 : grosses récompenses + SKIP 49 R$"
+        }
+      ]
+    },
+    {
+      "id": "0da82944ed",
+      "title": "Auras plus belles",
+      "description": "Contour lumineux et anneaux néon retirés, remplacés par des volutes d'énergie. Image dédiée pour la Prism Aura.",
+      "theme": "Gameplay",
+      "effort": "",
+      "risk": "",
+      "security": "",
+      "column": "done",
+      "position": 27,
+      "createdBy": "claude",
+      "createdAt": "2026-11-18T18:22:55",
+      "updatedAt": "2026-11-18T18:22:55",
+      "pending": false,
+      "pendingReason": "",
+      "notes": [],
+      "history": [
+        {
+          "at": "2026-11-18T18:22:55",
+          "by": "claude",
+          "action": "create",
+          "detail": "Auras plus belles"
+        }
+      ]
+    },
+    {
+      "id": "c2adbdb30d",
+      "title": "Formulaire admin CREATE CODE plus clair",
+      "description": "3 étapes numérotées (nom, récompenses avec icônes et choix d'aura, limites), aperçu en direct de ce que les joueurs recevront.",
+      "theme": "UI",
+      "effort": "",
+      "risk": "",
+      "security": "",
+      "column": "done",
+      "position": 28,
+      "createdBy": "claude",
+      "createdAt": "2026-11-18T18:22:55",
+      "updatedAt": "2026-11-18T18:22:55",
+      "pending": false,
+      "pendingReason": "",
+      "notes": [],
+      "history": [
+        {
+          "at": "2026-11-18T18:22:55",
+          "by": "claude",
+          "action": "create",
+          "detail": "Formulaire admin CREATE CODE plus clair"
+        }
+      ]
+    },
+    {
+      "id": "1e21a71de1",
+      "title": "Créer le produit Robux « Skip a Day » (49 R$)",
+      "description": "Le créer sur le Creator Dashboard (produit développeur), puis renseigner son ID dans Config.DailySkip.Id. En attendant : gratuit dans Studio, « Coming soon! » dans le jeu publié.",
+      "theme": "Release",
+      "effort": "S",
+      "risk": "faible",
+      "security": "",
+      "column": "rc",
+      "position": 15,
+      "createdBy": "claude",
+      "createdAt": "2026-11-18T18:22:55",
+      "updatedAt": "2026-11-18T18:22:55",
+      "pending": false,
+      "pendingReason": "",
+      "notes": [],
+      "history": [
+        {
+          "at": "2026-11-18T18:22:55",
+          "by": "claude",
+          "action": "create",
+          "detail": "Créer le produit Robux « Skip a Day » (49 R$)"
+        }
+      ]
+    },
+    {
+      "id": "6576a694ab",
+      "title": "Images d'auras sans anneaux au sol",
+      "description": "Les 11 anciennes images de cartes d'aura ont encore des anneaux au sol : les redessiner dans le style de la Prism si on veut tout uniformiser.",
+      "theme": "UI",
+      "effort": "",
+      "risk": "",
+      "security": "",
+      "column": "ideas",
+      "position": 0,
+      "createdBy": "claude",
+      "createdAt": "2026-11-18T18:22:55",
+      "updatedAt": "2026-11-18T18:22:55",
+      "pending": false,
+      "pendingReason": "",
+      "notes": [],
+      "history": [
+        {
+          "at": "2026-11-18T18:22:55",
+          "by": "claude",
+          "action": "create",
+          "detail": "Images d'auras sans anneaux au sol"
         }
       ]
     }
