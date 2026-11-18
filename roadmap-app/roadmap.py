@@ -24,6 +24,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from store import COLUMN_IDS, Store  # noqa: E402
 from server import DEFAULT_DATA  # noqa: E402
 from export_md import board_markdown, inject  # noqa: E402
+import export_html  # noqa: E402
 
 README = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "README.md")
 
@@ -98,7 +99,7 @@ def main(argv=None) -> int:
     s.add_argument("--description", default=""); s.add_argument("--effort", default=""); s.add_argument("--risk", default="")
     s.add_argument("--security", default=""); s.add_argument("--theme", default="")
     s = sub.add_parser("move"); s.add_argument("id"); s.add_argument("column", choices=sorted(COLUMN_IDS))
-    s = sub.add_parser("export"); s.add_argument("--readme", default=README)
+    s = sub.add_parser("export"); s.add_argument("--readme", default=README); s.add_argument("--page", default=export_html.OUTPUT)
     a = p.parse_args(argv)
 
     if hasattr(sys.stdout, "reconfigure"):
@@ -134,10 +135,12 @@ def main(argv=None) -> int:
         if os.path.exists(a.readme):
             with open(a.readme, encoding="utf-8") as f:
                 old = f.read()
-        new = inject(old, board_markdown(c.board()))
+        board = c.board()
+        new = inject(old, board_markdown(board))
         with open(a.readme, "w", encoding="utf-8", newline="\n") as f:
             f.write(new)
-        print(f"Roadmap exportée dans {a.readme}")
+        page = export_html.write(board, a.page)
+        print(f"Roadmap exportée dans {a.readme} et {page}")
         return 0
     return 1
 

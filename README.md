@@ -2,6 +2,7 @@
 
 Jeu Roblox de minage dans une grotte de cristaux, développé avec Roblox Studio (place `126196802646495`).
 
+- **Page web de la roadmap** (la plus lisible) : https://claude.ai/artifact/FDjoZW8VJtjuWtVp3WfPZa. Elle est privée : il faut être connecté à Claude.
 - **Roadmap ci-dessous**, mise à jour depuis l'app locale.
 - Le détail (bilan, checklist V1, priorités et sécurité) est dans [docs/ROADMAP.md](docs/ROADMAP.md).
 - La version modifiable est dans [roadmap-app/](roadmap-app/README.md).
@@ -9,7 +10,7 @@ Jeu Roblox de minage dans une grotte de cristaux, développé avec Roblox Studio
 <!-- ROADMAP:START (généré par roadmap-app/roadmap.py export, ne pas modifier à la main) -->
 ## Roadmap
 
-_Mise à jour : 18/11/2026 17:32 · 56 cartes · 0 à traiter._ Version modifiable : l'app locale `py roadmap-app/server.py` → http://127.0.0.1:8787
+_Mise à jour : 18/11/2026 17:38 · 56 cartes · 0 à traiter._ Version modifiable : l'app locale `py roadmap-app/server.py` → http://127.0.0.1:8787
 
 ### 🚦 Release candidate (avant V1) (15)
 
