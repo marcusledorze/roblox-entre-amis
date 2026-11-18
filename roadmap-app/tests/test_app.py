@@ -16,6 +16,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, ROOT)
 os.environ["ROADMAP_QUIET"] = "1"
 
+import export_html  # noqa: E402
 import export_md  # noqa: E402
 import roadmap  # noqa: E402
 import seed  # noqa: E402
@@ -247,9 +248,37 @@ class ExportTests(unittest.TestCase):
 
     def export(self):
         with redirect_stdout(io.StringIO()):
-            roadmap.main(["--port", "1", "--data", self.path, "export", "--readme", self.readme])
+            roadmap.main(["--port", "1", "--data", self.path, "export", "--readme", self.readme,
+                          "--page", os.path.join(self.dir, "page.html")])
         with open(self.readme, encoding="utf-8") as f:
             return f.read()
+
+    def page(self):
+        with open(os.path.join(self.dir, "page.html"), encoding="utf-8") as f:
+            return f.read()
+
+    def test_html_page_embeds_data_safely(self):
+        s = Store(self.path)
+        evil = "</script><script>alert(1)</script> & <img src=x onerror=alert(2)>"
+        c = s.create({"title": evil, "column": "rc", "actor": "user", "security": "a b"})
+        s.resolve(c["id"], "note 1")
+        s.resolve(c["id"], "note 2")
+        self.export()
+        html = self.page()
+        self.assertNotIn("__ROADMAP_DATA__", html)
+        self.assertNotIn("<script>alert", html)
+        self.assertNotIn("<img src=x", html)
+        self.assertEqual(html.count("</script>"), 2)  # seulement les 2 balises du modèle
+        start = html.index('id="roadmap-data">') + len('id="roadmap-data">')
+        payload = json.loads(html[start:html.index("</script>", start)])
+        card = payload["board"]["cards"][0]
+        self.assertEqual(card["title"], evil)  # le texte reste intact une fois décodé
+        self.assertEqual(card["notes"], [{"text": "note 2"}])  # seule la dernière note
+        self.assertNotIn("history", card)
+
+    def test_template_placeholder_required(self):
+        with self.assertRaises(ValueError):
+            export_html.render({"columns": [], "cards": []}, "<p>pas de marqueur</p>")
 
     def test_export_injects_block_and_keeps_rest(self):
         s = Store(self.path)

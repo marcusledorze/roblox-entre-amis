@@ -1,0 +1,480 @@
+<title>Roadmap Steal a Crystal</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Nunito:wght@400;600;700;800;900&display=swap">
+<style>
+/* Mise en page : une grotte qu'on descend. Chaque étape de la roadmap = une mine du jeu, du haut (fait) vers le bas (idées). */
+:root {
+  /* roche de la grotte (thème unique, sombre, assumé) */
+  --cave: #0f0b22;
+  --rock: #1a1535;
+  --rock-2: #241d48;
+  --line: #3a3168;
+  --text: #f3efff;
+  --muted: #a99fd6;
+  /* une couleur par mine, comme dans le jeu */
+  --green: #46e39a;
+  --ice: #74d6ff;
+  --lava: #ff8a4c;
+  --shadow: #b892ff;
+  --galaxy: #ffd65a;
+  --forge: #ff6fae;
+  /* risque */
+  --ok: #7be3a5;
+  --warn: #ffc857;
+  --bad: #ff6b6b;
+  --display: "Luckiest Guy", "Arial Black", Impact, sans-serif;
+  --body: "Nunito", "Segoe UI", system-ui, sans-serif;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--cave);
+  color: var(--text);
+  font: 16px/1.5 var(--body);
+}
+body::before {
+  content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--cave);
+}
+.wrap {
+  max-width: 1180px; margin: 0 auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+a { color: var(--ice); }
+:focus-visible { outline: 3px solid var(--galaxy); outline-offset: 2px; border-radius: 6px; }
+
+/* ---------- haut de page ---------- */
+.hero {
+  position: relative; overflow: hidden;
+  background:
+    radial-gradient(60% 80% at 15% 0%, color-mix(in srgb, var(--shadow) 28%, transparent), transparent 70%),
+    radial-gradient(50% 70% at 90% 10%, color-mix(in srgb, var(--ice) 22%, transparent), transparent 70%),
+    var(--cave);
+  border-bottom: 1px solid var(--line);
+}
+.hero .wrap { padding-block: 40px 30px; display: grid; gap: 26px; }
+.eyebrow { font-weight: 800; font-size: 13px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+h1 {
+  font: 400 clamp(42px, 8vw, 84px)/.95 var(--display); margin: 6px 0 8px; letter-spacing: 1px;
+  background: linear-gradient(180deg, #fff 10%, var(--ice) 55%, var(--shadow) 100%);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+  filter: drop-shadow(0 4px 0 #050310);
+  text-wrap: balance;
+}
+.lead { font-size: 19px; color: var(--muted); max-width: 46ch; margin: 0; }
+.lead strong { color: var(--text); }
+
+.launch {
+  display: grid; grid-template-columns: auto 1fr; gap: 18px 24px; align-items: center;
+  background: color-mix(in srgb, var(--rock) 85%, transparent); border: 1px solid var(--line);
+  border-radius: 20px; padding: 20px 22px;
+}
+.launch .big { font: 400 clamp(44px, 7vw, 64px)/1 var(--display); color: var(--ice); font-variant-numeric: tabular-nums; }
+.launch .big small { font-size: .45em; color: var(--muted); }
+.launch h2 { margin: 0 0 4px; font-size: 20px; font-weight: 900; }
+.launch p { margin: 0; color: var(--muted); }
+.shards { grid-column: 1 / -1; display: flex; gap: 6px; flex-wrap: wrap; }
+.shard {
+  width: 30px; height: 40px; flex: 0 0 auto;
+  clip-path: polygon(50% 0, 100% 30%, 82% 100%, 18% 100%, 0 30%);
+  background: var(--rock-2); box-shadow: inset 0 0 0 2px var(--line);
+}
+.shard.on {
+  background: linear-gradient(160deg, #fff 0%, var(--ice) 35%, #2c7fd6 100%);
+  filter: drop-shadow(0 0 8px color-mix(in srgb, var(--ice) 60%, transparent));
+}
+
+/* ---------- le chemin ---------- */
+.path { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 10px; }
+.stop {
+  appearance: none; font: inherit; color: inherit; text-align: left; cursor: pointer;
+  background: var(--rock); border: 1px solid var(--line); border-radius: 16px; padding: 14px 14px 12px;
+  display: grid; gap: 2px; position: relative; transition: transform .15s, border-color .15s;
+}
+.stop:hover { transform: translateY(-2px); border-color: var(--c); }
+.stop .n { font: 400 34px/1 var(--display); color: var(--c); font-variant-numeric: tabular-nums; }
+.stop .t { font-weight: 900; font-size: 15px; }
+.stop .z { font-size: 12px; color: var(--muted); font-weight: 700; }
+.stop.rocket { background: linear-gradient(160deg, color-mix(in srgb, var(--galaxy) 30%, var(--rock)), var(--rock)); border-color: color-mix(in srgb, var(--galaxy) 60%, var(--line)); cursor: default; }
+.stop.rocket:hover { transform: none; }
+.stop .step { position: absolute; top: 10px; right: 12px; font-size: 11px; font-weight: 900; color: var(--muted); }
+
+/* ---------- barre d'outils ---------- */
+.bar {
+  position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5;
+  background: color-mix(in srgb, var(--cave) 92%, transparent); backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
+}
+.bar .wrap { padding-block: 10px; display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.bar input {
+  flex: 1 1 220px; min-width: 0; font: inherit; color: var(--text); background: var(--rock);
+  border: 1px solid var(--line); border-radius: 999px; padding: 9px 16px;
+}
+.chip-btn {
+  font: inherit; font-weight: 800; font-size: 14px; color: var(--text); cursor: pointer;
+  background: var(--rock); border: 1px solid var(--line); border-radius: 999px; padding: 7px 14px;
+}
+.chip-btn[aria-pressed="true"] { background: var(--c, var(--ice)); color: #120d26; border-color: transparent; }
+
+/* ---------- maintenant ---------- */
+.now { padding-block: 34px 6px; }
+h3.sec { font: 400 30px/1.1 var(--display); margin: 0 0 6px; letter-spacing: .5px; }
+.sec-sub { color: var(--muted); margin: 0 0 16px; }
+.now-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+.now-card {
+  background: linear-gradient(170deg, color-mix(in srgb, var(--ice) 16%, var(--rock)), var(--rock) 60%);
+  border: 2px solid color-mix(in srgb, var(--ice) 55%, var(--line)); border-radius: 18px; padding: 18px;
+  display: grid; gap: 8px; align-content: start; min-width: 0;
+}
+.now-card .k { font: 400 40px/1 var(--display); color: var(--ice); }
+.now-card h4 { margin: 0; font-size: 19px; font-weight: 900; text-wrap: balance; }
+.now-card p { margin: 0; color: var(--muted); }
+
+/* ---------- mines ---------- */
+.zone { padding-block: 34px 8px; scroll-margin-top: 70px; }
+.zone-head { display: flex; flex-wrap: wrap; align-items: end; gap: 6px 14px; margin-bottom: 14px; }
+.zone-head h3 { font: 400 32px/1 var(--display); margin: 0; color: var(--c); letter-spacing: .5px; }
+.zone-head .count { font-weight: 900; color: var(--c); background: color-mix(in srgb, var(--c) 16%, transparent); border-radius: 999px; padding: 2px 10px; }
+.zone-head .z { color: var(--muted); font-weight: 700; font-size: 14px; }
+.zone-head p { flex-basis: 100%; margin: 0; color: var(--muted); }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 12px; }
+.card {
+  background: var(--rock); border: 1px solid var(--line); border-radius: 16px; padding: 16px;
+  display: grid; gap: 10px; align-content: start; min-width: 0; position: relative;
+}
+.card::before {
+  content: ""; position: absolute; left: 16px; top: 0; width: 34px; height: 4px; border-radius: 0 0 4px 4px; background: var(--c);
+}
+.card h4 { margin: 4px 0 0; font-size: 17px; font-weight: 900; line-height: 1.3; overflow-wrap: anywhere; }
+.card p { margin: 0; color: var(--muted); font-size: 15px; overflow-wrap: anywhere; }
+.meta { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+.pill { font-size: 13px; font-weight: 800; border-radius: 999px; padding: 3px 10px; background: var(--rock-2); color: var(--text); display: inline-flex; gap: 6px; align-items: center; }
+.gems { display: inline-flex; gap: 3px; }
+.gem { width: 10px; height: 12px; clip-path: polygon(50% 0, 100% 35%, 50% 100%, 0 35%); background: var(--line); }
+.gem.on { background: var(--c); }
+.risk-faible { color: var(--ok); }
+.risk-moyen { color: var(--warn); }
+.risk-élevé { color: var(--bad); }
+.dot { width: 8px; height: 8px; border-radius: 50%; background: currentColor; }
+.pending { background: color-mix(in srgb, var(--galaxy) 22%, transparent); color: var(--galaxy); }
+.sec-line {
+  display: grid; grid-template-columns: 18px 1fr; gap: 8px; font-size: 14px; color: var(--text);
+  background: color-mix(in srgb, var(--shadow) 12%, transparent); border-radius: 10px; padding: 8px 10px;
+}
+.sec-line svg { margin-top: 2px; }
+.note { font-size: 14px; color: var(--green); }
+.empty { color: var(--muted); background: var(--rock); border: 1px dashed var(--line); border-radius: 16px; padding: 18px; }
+
+/* fait : regroupé par thème */
+.done-groups { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 12px; }
+.done-group { background: var(--rock); border: 1px solid var(--line); border-radius: 16px; padding: 16px; min-width: 0; }
+.done-group h4 { margin: 0 0 10px; font-size: 14px; letter-spacing: .1em; text-transform: uppercase; color: var(--green); }
+.done-group ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.done-group li { display: grid; grid-template-columns: 22px 1fr; gap: 8px; }
+.done-group li b { display: block; font-weight: 800; }
+.done-group li span { color: var(--muted); font-size: 14px; }
+.check { width: 20px; height: 20px; border-radius: 50%; background: color-mix(in srgb, var(--green) 22%, transparent); color: var(--green); display: grid; place-items: center; margin-top: 2px; }
+
+/* légende */
+.legend { padding-block: 34px 50px; }
+.legend-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+.legend-box { background: var(--rock); border: 1px solid var(--line); border-radius: 16px; padding: 16px; min-width: 0; }
+.legend-box h4 { margin: 0 0 8px; font-weight: 900; }
+.legend-box ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 6px; color: var(--muted); }
+.legend-box li { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+footer { color: var(--muted); font-size: 14px; border-top: 1px solid var(--line); }
+footer .wrap { padding-block: 18px 30px; }
+code { background: var(--rock-2); padding: 1px 6px; border-radius: 6px; font-size: .9em; }
+.hidden-by-filter { display: none !important; }
+
+@media (max-width: 900px) {
+  .path { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .now-grid, .legend-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 520px) {
+  .path { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .launch { grid-template-columns: 1fr; }
+  .shard { width: 22px; height: 30px; }
+  .grid, .done-groups { grid-template-columns: 1fr; }
+}
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+
+<header class="hero">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow" id="updated">Roadmap</div>
+      <h1>STEAL A CRYSTAL!</h1>
+      <p class="lead">Où en est le jeu, et ce qu'on fait ensuite. <strong>On descend la grotte mine par mine</strong> : ce qui est fait en haut, les idées tout au fond.</p>
+    </div>
+    <section class="launch" aria-labelledby="launch-title">
+      <div class="big" id="launchCount">0<small> / 0</small></div>
+      <div>
+        <h2 id="launch-title">Lancement de la V1</h2>
+        <p id="launchText">Étapes à finir avant d'ouvrir le jeu au public.</p>
+      </div>
+      <div class="shards" id="shards" aria-hidden="true"></div>
+    </section>
+    <nav class="path" id="path" aria-label="Étapes de la roadmap"></nav>
+  </div>
+</header>
+
+<div class="bar">
+  <div class="wrap">
+    <input id="q" type="search" placeholder="Chercher (ex. Robux, gardes, données…)" aria-label="Chercher une carte">
+    <button class="chip-btn" id="fAll" aria-pressed="true">Tout</button>
+    <button class="chip-btn" id="fSec" aria-pressed="false">Sécurité</button>
+    <button class="chip-btn" id="fPend" aria-pressed="false">À traiter</button>
+  </div>
+</div>
+
+<main>
+  <section class="now wrap" id="now" aria-labelledby="now-title">
+    <h3 class="sec" id="now-title">À faire maintenant</h3>
+    <p class="sec-sub">Les 3 prochaines étapes avant la V1, dans l'ordre.</p>
+    <div class="now-grid" id="nowGrid"></div>
+  </section>
+  <div id="zones"></div>
+  <section class="legend wrap" aria-labelledby="legend-title">
+    <h3 class="sec" id="legend-title">Comment lire les cartes</h3>
+    <div class="legend-grid">
+      <div class="legend-box">
+        <h4>Effort</h4>
+        <ul id="legendEffort"></ul>
+      </div>
+      <div class="legend-box">
+        <h4>Risque</h4>
+        <ul>
+          <li><span class="pill risk-faible"><span class="dot"></span>faible</span> peu de chances de casser autre chose</li>
+          <li><span class="pill risk-moyen"><span class="dot"></span>moyen</span> à tester avec soin</li>
+          <li><span class="pill risk-élevé"><span class="dot"></span>élevé</span> peut changer l'équilibre du jeu</li>
+        </ul>
+      </div>
+      <div class="legend-box">
+        <h4>Repères</h4>
+        <ul>
+          <li><span class="pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>Sécurité</span> comment éviter la triche</li>
+          <li><span class="pill pending">À traiter</span> carte ajoutée ou changée, Claude doit la regarder</li>
+          <li><span class="note">✓ Note</span> ce que Claude a fait</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</main>
+<footer>
+  <div class="wrap">Page générée depuis l'app locale de la roadmap (<code>py roadmap-app/roadmap.py export</code>). Pour ajouter une idée : <code>py roadmap-app/server.py</code> puis http://127.0.0.1:8787.</div>
+</footer>
+
+<script type="application/json" id="roadmap-data">__ROADMAP_DATA__</script>
+<script>
+"use strict";
+(function () {
+  const data = JSON.parse(document.getElementById("roadmap-data").textContent);
+  const cards = data.board.cards;
+
+  // chaque colonne = une mine du jeu, dans l'ordre de la descente
+  const ZONES = [
+    { id: "done", title: "Fait", zone: "Green Cave", c: "--green", text: "Déjà dans le jeu." },
+    { id: "doing", title: "En cours", zone: "La Forge", c: "--forge", text: "Ce qui est en train d'être fait." },
+    { id: "rc", title: "Avant la V1", zone: "Ice Mine", c: "--ice", text: "À finir avant d'ouvrir le jeu au public." },
+    { id: "p1", title: "Stabilité", zone: "Lava Mine", c: "--lava", text: "Rendre le jeu solide : sauvegardes, achats Robux, anti-triche, performances." },
+    { id: "p2", title: "Nouveautés", zone: "Shadow Mine", c: "--shadow", text: "Du nouveau contenu pour que les joueurs reviennent." },
+    { id: "ideas", title: "Idées", zone: "Galaxy Mine", c: "--galaxy", text: "Les idées pas encore classées." },
+  ];
+  const EFFORT = {
+    "S": [1, "Petit", "moins d'une demi-journée"],
+    "S-M": [2, "Petit à moyen", "une demi-journée à un jour"],
+    "M": [2, "Moyen", "1 à 2 jours"],
+    "M-L": [3, "Moyen à gros", "2 à 3 jours"],
+    "L": [3, "Gros", "3 jours ou plus"],
+  };
+
+  const el = (tag, cls, text) => {
+    const n = document.createElement(tag);
+    if (cls) n.className = cls;
+    if (text != null) n.textContent = text;
+    return n;
+  };
+  const byPos = (a, b) => (a.position || 0) - (b.position || 0);
+  const inCol = (id) => cards.filter((c) => c.column === id).sort(byPos);
+  const lockSvg = () => {
+    const ns = "http://www.w3.org/2000/svg";
+    const s = document.createElementNS(ns, "svg");
+    s.setAttribute("width", "16"); s.setAttribute("height", "16"); s.setAttribute("viewBox", "0 0 24 24");
+    s.setAttribute("fill", "none"); s.setAttribute("stroke", "currentColor"); s.setAttribute("stroke-width", "2.5");
+    s.innerHTML = '<rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/>';
+    s.setAttribute("aria-hidden", "true");
+    return s;
+  };
+  const gems = (n, color) => {
+    const g = el("span", "gems");
+    for (let i = 0; i < 3; i++) {
+      const d = el("span", "gem" + (i < n ? " on" : ""));
+      d.style.setProperty("--c", color);
+      g.append(d);
+    }
+    return g;
+  };
+
+  // ---------- en-tête ----------
+  document.getElementById("updated").textContent = "Roadmap · mise à jour le " + data.generated;
+  const rcLeft = inCol("rc").length;
+  const rcDone = cards.filter((c) => c.column === "done" && c.theme === "Release").length;
+  const rcTotal = rcLeft + rcDone;
+  const lc = document.getElementById("launchCount");
+  lc.replaceChildren(document.createTextNode(String(rcDone)), el("small", null, " / " + rcTotal));
+  document.getElementById("launchText").textContent = rcLeft === 0
+    ? "Tout est prêt : on peut lancer la V1 !"
+    : rcDone + " étape" + (rcDone > 1 ? "s" : "") + " faite" + (rcDone > 1 ? "s" : "") + ", encore " + rcLeft + " avant d'ouvrir le jeu au public.";
+  const shards = document.getElementById("shards");
+  for (let i = 0; i < rcTotal; i++) shards.append(el("span", "shard" + (i < rcDone ? " on" : "")));
+
+  // ---------- chemin ----------
+  const path = document.getElementById("path");
+  const pathOrder = ["done", "doing", "rc", "LAUNCH", "p1", "p2", "ideas"];
+  let step = 0;
+  for (const id of pathOrder) {
+    if (id === "LAUNCH") {
+      const b = el("div", "stop rocket");
+      b.style.setProperty("--c", "var(--galaxy)");
+      b.append(el("span", "n", "V1"), el("span", "t", "Lancement"), el("span", "z", "Jeu ouvert au public"));
+      path.append(b);
+      continue;
+    }
+    const z = ZONES.find((x) => x.id === id);
+    const count = inCol(id).length;
+    if (id === "doing" && count === 0) continue;
+    step++;
+    const b = el("button", "stop");
+    b.type = "button";
+    b.style.setProperty("--c", "var(" + z.c + ")");
+    b.append(el("span", "step", String(step)), el("span", "n", String(count)), el("span", "t", z.title), el("span", "z", z.zone));
+    b.addEventListener("click", () => document.getElementById("zone-" + id).scrollIntoView({ behavior: "smooth" }));
+    path.append(b);
+  }
+
+  // ---------- maintenant ----------
+  const nowGrid = document.getElementById("nowGrid");
+  const next = inCol("rc").slice(0, 3);
+  if (!next.length) {
+    document.getElementById("now").hidden = true;
+  }
+  next.forEach((c, i) => {
+    const d = el("article", "now-card");
+    d.append(el("span", "k", String(i + 1)), el("h4", null, c.title));
+    if (c.description) d.append(el("p", null, c.description));
+    nowGrid.append(d);
+  });
+
+  // ---------- cartes ----------
+  function cardEl(c, color) {
+    const a = el("article", "card");
+    a.style.setProperty("--c", color);
+    a.dataset.search = [c.title, c.description, c.theme, c.security].join(" ").toLowerCase();
+    a.dataset.sec = c.security ? "1" : "";
+    a.dataset.pend = c.pending ? "1" : "";
+    a.append(el("h4", null, c.title));
+    if (c.description) a.append(el("p", null, c.description));
+    const meta = el("div", "meta");
+    if (c.pending) meta.append(el("span", "pill pending", "À traiter"));
+    if (EFFORT[c.effort]) {
+      const p = el("span", "pill");
+      p.title = "Effort : " + EFFORT[c.effort][2];
+      p.append(gems(EFFORT[c.effort][0], color), document.createTextNode(EFFORT[c.effort][1]));
+      meta.append(p);
+    }
+    if (c.risk) {
+      const r = el("span", "pill risk-" + c.risk);
+      r.append(el("span", "dot"), document.createTextNode("risque " + c.risk));
+      meta.append(r);
+    }
+    if (meta.childElementCount) a.append(meta);
+    if (c.security) {
+      const s = el("div", "sec-line");
+      s.append(lockSvg(), el("span", null, c.security));
+      a.append(s);
+    }
+    if (c.notes && c.notes.length) a.append(el("div", "note", "✓ " + c.notes[c.notes.length - 1].text));
+    return a;
+  }
+
+  const zonesEl = document.getElementById("zones");
+  for (const id of ["doing", "rc", "p1", "p2", "ideas", "done"]) {
+    const z = ZONES.find((x) => x.id === id);
+    const list = inCol(id);
+    if (id === "doing" && !list.length) continue;
+    const color = "var(" + z.c + ")";
+    const sec = el("section", "zone wrap");
+    sec.id = "zone-" + id;
+    sec.style.setProperty("--c", color);
+    const head = el("div", "zone-head");
+    head.append(el("h3", null, z.title), el("span", "count", String(list.length)), el("span", "z", z.zone), el("p", null, z.text));
+    sec.append(head);
+    if (!list.length) {
+      sec.append(el("div", "empty", id === "ideas" ? "Aucune idée pour l'instant. Ajoute-en une dans l'app locale avec le bouton +." : "Rien ici pour l'instant."));
+    } else if (id === "done") {
+      const groups = el("div", "done-groups");
+      const themes = [...new Set(list.map((c) => c.theme || "Autre"))];
+      for (const t of themes) {
+        const g = el("div", "done-group");
+        g.append(el("h4", null, t));
+        const ul = el("ul");
+        for (const c of list.filter((x) => (x.theme || "Autre") === t)) {
+          const li = el("li");
+          li.dataset.search = [c.title, c.description, c.theme].join(" ").toLowerCase();
+          const txt = el("div");
+          txt.append(el("b", null, c.title));
+          if (c.description) txt.append(el("span", null, c.description));
+          li.append(el("span", "check", "✓"), txt);
+          ul.append(li);
+        }
+        g.append(ul);
+        groups.append(g);
+      }
+      sec.append(groups);
+    } else {
+      const grid = el("div", "grid");
+      list.forEach((c) => grid.append(cardEl(c, color)));
+      sec.append(grid);
+    }
+    zonesEl.append(sec);
+  }
+
+  // ---------- légende effort ----------
+  const le = document.getElementById("legendEffort");
+  for (const k of ["S", "M", "L"]) {
+    const li = el("li");
+    const p = el("span", "pill");
+    p.append(gems(EFFORT[k][0], "var(--ice)"), document.createTextNode(EFFORT[k][1]));
+    li.append(p, document.createTextNode(EFFORT[k][2]));
+    le.append(li);
+  }
+
+  // ---------- filtres ----------
+  const q = document.getElementById("q");
+  const btns = { all: document.getElementById("fAll"), sec: document.getElementById("fSec"), pend: document.getElementById("fPend") };
+  let mode = "all";
+  function apply() {
+    const term = q.value.trim().toLowerCase();
+    document.querySelectorAll(".card, .done-group li").forEach((n) => {
+      let show = !term || (n.dataset.search || "").includes(term);
+      if (mode === "sec") show = show && n.dataset.sec === "1";
+      if (mode === "pend") show = show && n.dataset.pend === "1";
+      n.classList.toggle("hidden-by-filter", !show);
+    });
+    document.querySelectorAll(".done-group").forEach((g) => {
+      g.classList.toggle("hidden-by-filter", !g.querySelector("li:not(.hidden-by-filter)"));
+    });
+  }
+  for (const [k, b] of Object.entries(btns)) {
+    b.addEventListener("click", () => {
+      mode = k;
+      for (const [k2, b2] of Object.entries(btns)) b2.setAttribute("aria-pressed", String(k2 === k));
+      apply();
+    });
+  }
+  q.addEventListener("input", apply);
+})();
+</script>
