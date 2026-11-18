@@ -1,5 +1,5 @@
 {
-  "rev": 76,
+  "rev": 82,
   "cards": [
     {
       "id": "9b3125929f",
@@ -1636,31 +1636,6 @@
       ]
     },
     {
-      "id": "4c7b40c6f4",
-      "title": "Mettre hors vente le Game Pass « skip a day »",
-      "description": "Le Game Pass 2093583130 est en vente mais ne donne rien dans le jeu : le désactiver sur le Creator Dashboard pour qu'aucun joueur ne l'achète.",
-      "theme": "Release",
-      "effort": "S",
-      "risk": "faible",
-      "security": "Éviter un achat Robux sans contrepartie (remboursements, signalements).",
-      "column": "rc",
-      "position": 14,
-      "createdBy": "claude",
-      "createdAt": "2026-11-18T18:26:32",
-      "updatedAt": "2026-11-18T18:26:32",
-      "pending": false,
-      "pendingReason": "",
-      "notes": [],
-      "history": [
-        {
-          "at": "2026-11-18T18:26:32",
-          "by": "claude",
-          "action": "create",
-          "detail": "Mettre hors vente le Game Pass « skip a day »"
-        }
-      ]
-    },
-    {
       "id": "f709b3408e",
       "title": "Renommer le Game Pass Elite sur Roblox",
       "description": "Son nom sur Roblox est « elite_pack.png » : c'est ce que voient les joueurs dans la fenêtre d'achat. Le renommer « Elite Pack ».",
@@ -1669,7 +1644,7 @@
       "risk": "faible",
       "security": "",
       "column": "rc",
-      "position": 15,
+      "position": 14,
       "createdBy": "claude",
       "createdAt": "2026-11-18T18:26:33",
       "updatedAt": "2026-11-18T18:26:33",
@@ -1784,27 +1759,89 @@
       ]
     },
     {
-      "id": "e8bb7706ad",
-      "title": "Mettre hors vente le Game Pass « skip treadmill »",
-      "description": "Le Game Pass 2092935142 est en vente mais ne donne rien dans le jeu : le désactiver sur le Creator Dashboard.",
-      "theme": "Release",
-      "effort": "S",
-      "risk": "faible",
-      "security": "Éviter un achat Robux sans contrepartie.",
-      "column": "rc",
-      "position": 16,
+      "id": "8b40c15340",
+      "title": "Prix du tapis en Robux qui monte",
+      "description": "Prix par niveau : 49, 59, 69, 79 (+10), puis 99 (+20), 129 (+30), 179, 229, 279 (+50). Testé en Play : niveau 2 = R$ 59, niveau 3 = R$ 69 (place v76). La chaîne de 6 Game Pass skip a day a été annulée : le SKIP garde le Developer Product illimité.",
+      "theme": "Robux",
+      "effort": "",
+      "risk": "",
+      "security": "",
+      "column": "done",
+      "position": 34,
       "createdBy": "claude",
-      "createdAt": "2026-11-18T19:02:59",
-      "updatedAt": "2026-11-18T19:02:59",
+      "createdAt": "2026-11-18T19:49:27",
+      "updatedAt": "2026-11-18T19:49:27",
       "pending": false,
       "pendingReason": "",
       "notes": [],
       "history": [
         {
-          "at": "2026-11-18T19:02:59",
+          "at": "2026-11-18T19:49:27",
           "by": "claude",
           "action": "create",
-          "detail": "Mettre hors vente le Game Pass « skip treadmill »"
+          "detail": "Prix du tapis en Robux qui monte"
+        }
+      ]
+    },
+    {
+      "id": "543356dc7f",
+      "title": "Créer les 8 produits du tapis (Lv3 à Lv10)",
+      "description": "Developer Products à 59, 69, 79, 99, 129, 179, 229 et 279 R$, puis renseigner leurs ID dans Config.TreadmillRobux.Levels[2..9]. Le niveau 1 vers 2 (49 R$) est déjà branché. Bloqué : connexion à Roblox coupée pendant la création.",
+      "theme": "Release",
+      "effort": "S",
+      "risk": "faible",
+      "security": "",
+      "column": "done",
+      "position": 35,
+      "createdBy": "claude",
+      "createdAt": "2026-11-18T19:49:27",
+      "updatedAt": "2026-11-18T20:05:20",
+      "pending": false,
+      "pendingReason": "",
+      "notes": [
+        {
+          "at": "2026-11-18T20:05:20",
+          "by": "claude",
+          "text": "8 Developer Products créés (Treadmill Upgrade Lv3 à Lv10, 59 à 279 R$, prix fixes) et branchés (place v77). Vérifié : les 9 prix affichés = prix Roblox."
+        }
+      ],
+      "history": [
+        {
+          "at": "2026-11-18T19:49:27",
+          "by": "claude",
+          "action": "create",
+          "detail": "Créer les 8 produits du tapis (Lv3 à Lv10)"
+        },
+        {
+          "at": "2026-11-18T20:05:20",
+          "by": "claude",
+          "action": "resolve",
+          "detail": "8 Developer Products créés (Treadmill Upgrade Lv3 à Lv10, 59 à 279 R$, prix fixes) et branchés (place v77). Vérifié : les 9 prix affichés = prix Roblox."
+        }
+      ]
+    },
+    {
+      "id": "965d9d19a9",
+      "title": "Mettre hors vente les 7 Game Pass « skip a day » et « skip treadmill »",
+      "description": "2093583130, 2092587214, 2092275232, 2093589174, 2092707196, 2092557232, 2092251222 (skip a day) et 2092935142 (skip treadmill) : en vente mais inutilisés par le jeu.",
+      "theme": "Release",
+      "effort": "S",
+      "risk": "faible",
+      "security": "Éviter des achats Robux sans contrepartie.",
+      "column": "rc",
+      "position": 15,
+      "createdBy": "claude",
+      "createdAt": "2026-11-18T19:49:27",
+      "updatedAt": "2026-11-18T19:49:27",
+      "pending": false,
+      "pendingReason": "",
+      "notes": [],
+      "history": [
+        {
+          "at": "2026-11-18T19:49:27",
+          "by": "claude",
+          "action": "create",
+          "detail": "Mettre hors vente les 7 Game Pass « skip a day » et « skip treadmill »"
         }
       ]
     }
