@@ -1,5 +1,5 @@
 {
-  "rev": 65,
+  "rev": 69,
   "cards": [
     {
       "id": "9b3125929f",
@@ -634,20 +634,32 @@
       "effort": "S",
       "risk": "faible",
       "security": "Revérifier la propriété côté serveur à la connexion.",
-      "column": "rc",
-      "position": 1,
+      "column": "done",
+      "position": 29,
       "createdBy": "claude",
       "createdAt": "2026-11-18T17:12:07",
-      "updatedAt": "2026-11-18T17:12:07",
+      "updatedAt": "2026-11-18T18:26:32",
       "pending": false,
       "pendingReason": "",
-      "notes": [],
+      "notes": [
+        {
+          "at": "2026-11-18T18:26:32",
+          "by": "claude",
+          "text": "ID renseignés (place v70) : Starter 2093673183 (R$ 59), Pro 2092851170 (R$ 99), Elite 2093529130 (R$ 159). Prix du jeu alignés sur Roblox. Un pack acheté hors du jeu donne maintenant son contenu à la connexion."
+        }
+      ],
       "history": [
         {
           "at": "2026-11-18T17:12:07",
           "by": "claude",
           "action": "create",
           "detail": "Créer les 3 Game Pass des starter packs"
+        },
+        {
+          "at": "2026-11-18T18:26:32",
+          "by": "claude",
+          "action": "resolve",
+          "detail": "ID renseignés (place v70) : Starter 2093673183 (R$ 59), Pro 2092851170 (R$ 99), Elite 2093529130 (R$ 159). Prix du jeu alignés sur Roblox. Un pack acheté hors du jeu donne maintenant son contenu à la connexion."
         }
       ]
     },
@@ -660,7 +672,7 @@
       "risk": "faible",
       "security": "",
       "column": "rc",
-      "position": 2,
+      "position": 1,
       "createdBy": "claude",
       "createdAt": "2026-11-18T17:12:07",
       "updatedAt": "2026-11-18T17:12:07",
@@ -685,7 +697,7 @@
       "risk": "faible",
       "security": "Évite double livraison et paiement sans livraison.",
       "column": "rc",
-      "position": 3,
+      "position": 2,
       "createdBy": "claude",
       "createdAt": "2026-11-18T17:12:07",
       "updatedAt": "2026-11-18T17:12:07",
@@ -710,7 +722,7 @@
       "risk": "moyen",
       "security": "Empêche l'écrasement de données via plusieurs serveurs.",
       "column": "rc",
-      "position": 4,
+      "position": 3,
       "createdBy": "claude",
       "createdAt": "2026-11-18T17:12:07",
       "updatedAt": "2026-11-18T17:12:07",
@@ -735,7 +747,7 @@
       "risk": "faible",
       "security": "",
       "column": "rc",
-      "position": 5,
+      "position": 4,
       "createdBy": "claude",
       "createdAt": "2026-11-18T17:12:07",
       "updatedAt": "2026-11-18T17:12:07",
@@ -760,7 +772,7 @@
       "risk": "faible",
       "security": "",
       "column": "rc",
-      "position": 6,
+      "position": 5,
       "createdBy": "claude",
       "createdAt": "2026-11-18T17:12:07",
       "updatedAt": "2026-11-18T17:12:07",
@@ -785,7 +797,7 @@
       "risk": "faible",
       "security": "",
       "column": "rc",
-      "position": 7,
+      "position": 6,
       "createdBy": "claude",
       "createdAt": "2026-11-18T17:12:07",
       "updatedAt": "2026-11-18T17:12:07",
@@ -810,7 +822,7 @@
       "risk": "faible",
       "security": "Vérifier qu'aucun achat n'est simulé en production.",
       "column": "rc",
-      "position": 8,
+      "position": 7,
       "createdBy": "claude",
       "createdAt": "2026-11-18T17:12:07",
       "updatedAt": "2026-11-18T17:12:07",
@@ -835,7 +847,7 @@
       "risk": "faible",
       "security": "",
       "column": "rc",
-      "position": 9,
+      "position": 8,
       "createdBy": "claude",
       "createdAt": "2026-11-18T17:12:07",
       "updatedAt": "2026-11-18T17:12:07",
@@ -860,7 +872,7 @@
       "risk": "faible",
       "security": "",
       "column": "rc",
-      "position": 10,
+      "position": 9,
       "createdBy": "claude",
       "createdAt": "2026-11-18T17:12:07",
       "updatedAt": "2026-11-18T17:12:07",
@@ -885,7 +897,7 @@
       "risk": "moyen",
       "security": "",
       "column": "rc",
-      "position": 11,
+      "position": 10,
       "createdBy": "claude",
       "createdAt": "2026-11-18T17:12:07",
       "updatedAt": "2026-11-18T17:12:07",
@@ -910,7 +922,7 @@
       "risk": "faible",
       "security": "",
       "column": "rc",
-      "position": 12,
+      "position": 11,
       "createdBy": "claude",
       "createdAt": "2026-11-18T17:12:07",
       "updatedAt": "2026-11-18T17:12:07",
@@ -935,7 +947,7 @@
       "risk": "faible",
       "security": "Aucun avantage gratuit hors Studio.",
       "column": "rc",
-      "position": 13,
+      "position": 12,
       "createdBy": "claude",
       "createdAt": "2026-11-18T17:12:07",
       "updatedAt": "2026-11-18T17:12:07",
@@ -960,7 +972,7 @@
       "risk": "faible",
       "security": "",
       "column": "rc",
-      "position": 14,
+      "position": 13,
       "createdBy": "claude",
       "createdAt": "2026-11-18T17:12:07",
       "updatedAt": "2026-11-18T17:12:07",
@@ -1559,19 +1571,31 @@
       "risk": "faible",
       "security": "",
       "column": "rc",
-      "position": 15,
+      "position": 14,
       "createdBy": "claude",
       "createdAt": "2026-11-18T18:22:55",
-      "updatedAt": "2026-11-18T18:22:55",
+      "updatedAt": "2026-11-18T18:26:32",
       "pending": false,
       "pendingReason": "",
-      "notes": [],
+      "notes": [
+        {
+          "at": "2026-11-18T18:26:32",
+          "by": "claude",
+          "text": "L'ID 2093583130 reçu est un Game Pass (achetable une seule fois) : pas utilisable pour un SKIP répétable. Il faut un produit développeur. Carte laissée dans Avant la V1."
+        }
+      ],
       "history": [
         {
           "at": "2026-11-18T18:22:55",
           "by": "claude",
           "action": "create",
           "detail": "Créer le produit Robux « Skip a Day » (49 R$)"
+        },
+        {
+          "at": "2026-11-18T18:26:32",
+          "by": "claude",
+          "action": "resolve",
+          "detail": "L'ID 2093583130 reçu est un Game Pass (achetable une seule fois) : pas utilisable pour un SKIP répétable. Il faut un produit développeur. Carte laissée dans Avant la V1."
         }
       ]
     },
@@ -1597,6 +1621,56 @@
           "by": "claude",
           "action": "create",
           "detail": "Images d'auras sans anneaux au sol"
+        }
+      ]
+    },
+    {
+      "id": "4c7b40c6f4",
+      "title": "Mettre hors vente le Game Pass « skip a day »",
+      "description": "Le Game Pass 2093583130 est en vente mais ne donne rien dans le jeu : le désactiver sur le Creator Dashboard pour qu'aucun joueur ne l'achète.",
+      "theme": "Release",
+      "effort": "S",
+      "risk": "faible",
+      "security": "Éviter un achat Robux sans contrepartie (remboursements, signalements).",
+      "column": "rc",
+      "position": 15,
+      "createdBy": "claude",
+      "createdAt": "2026-11-18T18:26:32",
+      "updatedAt": "2026-11-18T18:26:32",
+      "pending": false,
+      "pendingReason": "",
+      "notes": [],
+      "history": [
+        {
+          "at": "2026-11-18T18:26:32",
+          "by": "claude",
+          "action": "create",
+          "detail": "Mettre hors vente le Game Pass « skip a day »"
+        }
+      ]
+    },
+    {
+      "id": "f709b3408e",
+      "title": "Renommer le Game Pass Elite sur Roblox",
+      "description": "Son nom sur Roblox est « elite_pack.png » : c'est ce que voient les joueurs dans la fenêtre d'achat. Le renommer « Elite Pack ».",
+      "theme": "Release",
+      "effort": "S",
+      "risk": "faible",
+      "security": "",
+      "column": "rc",
+      "position": 16,
+      "createdBy": "claude",
+      "createdAt": "2026-11-18T18:26:33",
+      "updatedAt": "2026-11-18T18:26:33",
+      "pending": false,
+      "pendingReason": "",
+      "notes": [],
+      "history": [
+        {
+          "at": "2026-11-18T18:26:33",
+          "by": "claude",
+          "action": "create",
+          "detail": "Renommer le Game Pass Elite sur Roblox"
         }
       ]
     }
