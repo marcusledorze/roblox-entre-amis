@@ -1,5 +1,5 @@
 {
-  "rev": 74,
+  "rev": 76,
   "cards": [
     {
       "id": "9b3125929f",
@@ -1570,11 +1570,11 @@
       "effort": "S",
       "risk": "faible",
       "security": "",
-      "column": "rc",
-      "position": 14,
+      "column": "done",
+      "position": 32,
       "createdBy": "claude",
       "createdAt": "2026-11-18T18:22:55",
-      "updatedAt": "2026-11-18T18:26:32",
+      "updatedAt": "2026-11-18T19:30:34",
       "pending": false,
       "pendingReason": "",
       "notes": [
@@ -1582,6 +1582,11 @@
           "at": "2026-11-18T18:26:32",
           "by": "claude",
           "text": "L'ID 2093583130 reçu est un Game Pass (achetable une seule fois) : pas utilisable pour un SKIP répétable. Il faut un produit développeur. Carte laissée dans Avant la V1."
+        },
+        {
+          "at": "2026-11-18T19:30:34",
+          "by": "claude",
+          "text": "Developer Product « Skip a Day » créé (3733109882, R$ 49, prix fixe) et branché (place v74). Testé : le bouton ouvre l'achat Roblox."
         }
       ],
       "history": [
@@ -1596,6 +1601,12 @@
           "by": "claude",
           "action": "resolve",
           "detail": "L'ID 2093583130 reçu est un Game Pass (achetable une seule fois) : pas utilisable pour un SKIP répétable. Il faut un produit développeur. Carte laissée dans Avant la V1."
+        },
+        {
+          "at": "2026-11-18T19:30:34",
+          "by": "claude",
+          "action": "resolve",
+          "detail": "Developer Product « Skip a Day » créé (3733109882, R$ 49, prix fixe) et branché (place v74). Testé : le bouton ouvre l'achat Roblox."
         }
       ]
     },
@@ -1633,7 +1644,7 @@
       "risk": "faible",
       "security": "Éviter un achat Robux sans contrepartie (remboursements, signalements).",
       "column": "rc",
-      "position": 15,
+      "position": 14,
       "createdBy": "claude",
       "createdAt": "2026-11-18T18:26:32",
       "updatedAt": "2026-11-18T18:26:32",
@@ -1658,7 +1669,7 @@
       "risk": "faible",
       "security": "",
       "column": "rc",
-      "position": 16,
+      "position": 15,
       "createdBy": "claude",
       "createdAt": "2026-11-18T18:26:33",
       "updatedAt": "2026-11-18T18:26:33",
@@ -1732,11 +1743,11 @@
       "effort": "S",
       "risk": "faible",
       "security": "",
-      "column": "rc",
-      "position": 17,
+      "column": "done",
+      "position": 33,
       "createdBy": "claude",
       "createdAt": "2026-11-18T18:42:05",
-      "updatedAt": "2026-11-18T19:02:59",
+      "updatedAt": "2026-11-18T19:30:34",
       "pending": false,
       "pendingReason": "",
       "notes": [
@@ -1744,6 +1755,11 @@
           "at": "2026-11-18T19:02:59",
           "by": "claude",
           "text": "x2 Money branché (Game Pass 2093541135, R$ 259, place v73). « skip treadmill » (2092935142) est un Game Pass : il faut un Developer Product pour le tapis aussi. Création automatique refusée : la permission developer-product:write n'est pas accordée."
+        },
+        {
+          "at": "2026-11-18T19:30:34",
+          "by": "claude",
+          "text": "Fait : x2 Money (2093541135, R$ 259) et Developer Product « Treadmill +1 Level » (3733110118, R$ 49) créés et branchés (place v74)."
         }
       ],
       "history": [
@@ -1758,6 +1774,12 @@
           "by": "claude",
           "action": "resolve",
           "detail": "x2 Money branché (Game Pass 2093541135, R$ 259, place v73). « skip treadmill » (2092935142) est un Game Pass : il faut un Developer Product pour le tapis aussi. Création automatique refusée : la permission developer-product:write n'est pas accordée."
+        },
+        {
+          "at": "2026-11-18T19:30:34",
+          "by": "claude",
+          "action": "resolve",
+          "detail": "Fait : x2 Money (2093541135, R$ 259) et Developer Product « Treadmill +1 Level » (3733110118, R$ 49) créés et branchés (place v74)."
         }
       ]
     },
@@ -1770,7 +1792,7 @@
       "risk": "faible",
       "security": "Éviter un achat Robux sans contrepartie.",
       "column": "rc",
-      "position": 18,
+      "position": 16,
       "createdBy": "claude",
       "createdAt": "2026-11-18T19:02:59",
       "updatedAt": "2026-11-18T19:02:59",
