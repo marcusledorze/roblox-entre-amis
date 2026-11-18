@@ -10,9 +10,9 @@ Jeu Roblox de minage dans une grotte de cristaux, développé avec Roblox Studio
 <!-- ROADMAP:START (généré par roadmap-app/roadmap.py export, ne pas modifier à la main) -->
 ## Roadmap
 
-_Mise à jour : 18/11/2026 20:05 · 70 cartes · 0 à traiter._ Version modifiable : l'app locale `py roadmap-app/server.py` → http://127.0.0.1:8787
+_Mise à jour : 18/11/2026 20:09 · 70 cartes · 0 à traiter._ Version modifiable : l'app locale `py roadmap-app/server.py` → http://127.0.0.1:8787
 
-### 🚦 Release candidate (avant V1) (16)
+### 🚦 Release candidate (avant V1) (15)
 
 - [ ] **Sauvegarder la place (v58)** — Arrêter le test de jeu, Ctrl+S, vérifier sac, chaussures et images d'auras. · _effort S · risque faible_
 - [ ] **Produits à ID 0 : créer ou cacher** — Pioches Rainbow / Ruby et packs de vitesse Speed25/100/500 affichent « Coming soon! ». · _effort S · risque faible_
@@ -33,8 +33,6 @@ _Mise à jour : 18/11/2026 20:05 · 70 cartes · 0 à traiter._ Version modifiab
   - 🔒 Aucun avantage gratuit hors Studio.
 - [ ] **Copie .rbxl après publication** — Garder une copie de la place dans le dépôt pour revenir en arrière. · _effort S · risque faible_
 - [ ] **Renommer le Game Pass Elite sur Roblox** — Son nom sur Roblox est « elite\_pack.png » : c'est ce que voient les joueurs dans la fenêtre d'achat. Le renommer « Elite Pack ». · _effort S · risque faible_
-- [ ] **Mettre hors vente les 7 Game Pass « skip a day » et « skip treadmill »** — 2093583130, 2092587214, 2092275232, 2093589174, 2092707196, 2092557232, 2092251222 (skip a day) et 2092935142 (skip treadmill) : en vente mais inutilisés par le jeu. · _effort S · risque faible_
-  - 🔒 Éviter des achats Robux sans contrepartie.
 
 ### 🔧 En cours (0)
 
@@ -82,7 +80,7 @@ _Vide._
 
 - [ ] **Images d'auras sans anneaux au sol** — Les 11 anciennes images de cartes d'aura ont encore des anneaux au sol : les redessiner dans le style de la Prism si on veut tout uniformiser.
 
-### ✅ Fait (36)
+### ✅ Fait (37)
 
 <details><summary>Voir tout ce qui a été fait</summary>
 
@@ -133,6 +131,9 @@ _Vide._
 - [x] **Prix du tapis en Robux qui monte** — Prix par niveau : 49, 59, 69, 79 (+10), puis 99 (+20), 129 (+30), 179, 229, 279 (+50). Testé en Play : niveau 2 = R$ 59, niveau 3 = R$ 69 (place v76). La chaîne de 6 Game Pass skip a day a été annulée : le SKIP garde le Developer Product illimité.
 - [x] **Créer les 8 produits du tapis (Lv3 à Lv10)** — Developer Products à 59, 69, 79, 99, 129, 179, 229 et 279 R$, puis renseigner leurs ID dans Config.TreadmillRobux.Levels\[2..9\]. Le niveau 1 vers 2 (49 R$) est déjà branché. Bloqué : connexion à Roblox coupée pendant la création. · _effort S · risque faible_
   - 📝 8 Developer Products créés (Treadmill Upgrade Lv3 à Lv10, 59 à 279 R$, prix fixes) et branchés (place v77). Vérifié : les 9 prix affichés = prix Roblox.
+- [x] **Mettre hors vente les 7 Game Pass « skip a day » et « skip treadmill »** — 2093583130, 2092587214, 2092275232, 2093589174, 2092707196, 2092557232, 2092251222 (skip a day) et 2092935142 (skip treadmill) : en vente mais inutilisés par le jeu. · _effort S · risque faible_
+  - 🔒 Éviter des achats Robux sans contrepartie.
+  - 📝 Les 8 Game Pass (7 skip a day + skip treadmill) sont hors vente, confirmé par Roblox (IsForSale = false).
 
 </details>
 <!-- ROADMAP:END -->
