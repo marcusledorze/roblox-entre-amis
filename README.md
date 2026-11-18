@@ -10,9 +10,9 @@ Jeu Roblox de minage dans une grotte de cristaux, développé avec Roblox Studio
 <!-- ROADMAP:START (généré par roadmap-app/roadmap.py export, ne pas modifier à la main) -->
 ## Roadmap
 
-_Mise à jour : 18/11/2026 18:42 · 68 cartes · 0 à traiter._ Version modifiable : l'app locale `py roadmap-app/server.py` → http://127.0.0.1:8787
+_Mise à jour : 18/11/2026 19:03 · 69 cartes · 0 à traiter._ Version modifiable : l'app locale `py roadmap-app/server.py` → http://127.0.0.1:8787
 
-### 🚦 Release candidate (avant V1) (18)
+### 🚦 Release candidate (avant V1) (19)
 
 - [ ] **Sauvegarder la place (v58)** — Arrêter le test de jeu, Ctrl+S, vérifier sac, chaussures et images d'auras. · _effort S · risque faible_
 - [ ] **Produits à ID 0 : créer ou cacher** — Pioches Rainbow / Ruby et packs de vitesse Speed25/100/500 affichent « Coming soon! ». · _effort S · risque faible_
@@ -38,6 +38,9 @@ _Mise à jour : 18/11/2026 18:42 · 68 cartes · 0 à traiter._ Version modifiab
   - 🔒 Éviter un achat Robux sans contrepartie (remboursements, signalements).
 - [ ] **Renommer le Game Pass Elite sur Roblox** — Son nom sur Roblox est « elite\_pack.png » : c'est ce que voient les joueurs dans la fenêtre d'achat. Le renommer « Elite Pack ». · _effort S · risque faible_
 - [ ] **Créer le Game Pass x2 Money et le produit Tapis +1 niveau** — Creator Dashboard : Game Pass « x2 Money » (prix au choix, 199 R$ proposé) et Developer Product « Treadmill +1 Level » (49 R$). Renseigner Config.GamePasses.DoubleMoney.Id et Config.TreadmillRobux.Id. En attendant : gratuits dans Studio, « Coming soon! » en ligne. · _effort S · risque faible_
+  - 📝 x2 Money branché (Game Pass 2093541135, R$ 259, place v73). « skip treadmill » (2092935142) est un Game Pass : il faut un Developer Product pour le tapis aussi. Création automatique refusée : la permission developer-product:write n'est pas accordée.
+- [ ] **Mettre hors vente le Game Pass « skip treadmill »** — Le Game Pass 2092935142 est en vente mais ne donne rien dans le jeu : le désactiver sur le Creator Dashboard. · _effort S · risque faible_
+  - 🔒 Éviter un achat Robux sans contrepartie.
 
 ### 🔧 En cours (0)
 
