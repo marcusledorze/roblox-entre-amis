@@ -16,6 +16,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, ROOT)
 os.environ["ROADMAP_QUIET"] = "1"
 
+import export_md  # noqa: E402
 import roadmap  # noqa: E402
 import seed  # noqa: E402
 from server import make_server  # noqa: E402
@@ -233,6 +234,58 @@ class CliOfflineTests(unittest.TestCase):
             self.assertEqual((card["pending"], card["column"]), (False, "done"))
         finally:
             shutil.rmtree(d, ignore_errors=True)
+
+
+class ExportTests(unittest.TestCase):
+    def setUp(self):
+        self.dir = tempfile.mkdtemp()
+        self.path = os.path.join(self.dir, "r.json")
+        self.readme = os.path.join(self.dir, "README.md")
+
+    def tearDown(self):
+        shutil.rmtree(self.dir, ignore_errors=True)
+
+    def export(self):
+        with redirect_stdout(io.StringIO()):
+            roadmap.main(["--port", "1", "--data", self.path, "export", "--readme", self.readme])
+        with open(self.readme, encoding="utf-8") as f:
+            return f.read()
+
+    def test_export_injects_block_and_keeps_rest(self):
+        s = Store(self.path)
+        s.create({"title": "Daily rewards", "column": "p2", "effort": "S", "security": "heure serveur", "actor": "user"})
+        done = s.create({"title": "Tutoriel", "column": "done", "actor": "claude"})
+        s.resolve(done["id"], "Vérifié en jeu")
+        with open(self.readme, "w", encoding="utf-8") as f:
+            f.write("# Titre\n\nIntro\n\n" + export_md.START + "\nancien\n" + export_md.END + "\n\nFin\n")
+        text = self.export()
+        self.assertTrue(text.startswith("# Titre\n\nIntro\n"))
+        self.assertTrue(text.rstrip().endswith("Fin"))
+        self.assertNotIn("ancien", text)
+        self.assertIn("- [ ] **Daily rewards**", text)
+        self.assertIn("⚠️ à traiter", text)
+        self.assertIn("🔒 heure serveur", text)
+        self.assertIn("- [x] **Tutoriel**", text)
+        self.assertIn("📝 Vérifié en jeu", text)
+        # idempotent : un 2e export ne duplique pas le bloc
+        self.assertEqual(self.export().count(export_md.START), 1)
+
+    def test_export_escapes_markdown_and_html(self):
+        s = Store(self.path)
+        s.create({"title": "<script>alert(1)</script> [lien](http://x) | ## titre", "actor": "claude",
+                  "description": "ligne1\nligne2 ![img](x)"})
+        text = self.export()
+        self.assertNotIn("<script>", text)
+        self.assertIn("&lt;script&gt;", text)
+        self.assertNotIn("[lien](", text)
+        self.assertNotIn("![img](", text)
+        self.assertIn("ligne1 ligne2", text)
+
+    def test_export_without_readme_creates_it(self):
+        Store(self.path).create({"title": "X", "actor": "claude"})
+        text = self.export()
+        self.assertTrue(text.startswith(export_md.START))
+        self.assertIn(export_md.END, text)
 
 
 if __name__ == "__main__":

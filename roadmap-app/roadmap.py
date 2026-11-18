@@ -5,6 +5,7 @@
   py roadmap-app/roadmap.py resolve <id> "note" [--column done]
   py roadmap-app/roadmap.py add "titre" --column p1 [--description ...] [--effort S] [--risk faible]
   py roadmap-app/roadmap.py move <id> <colonne>
+  py roadmap-app/roadmap.py export                      # met à jour la roadmap du README.md (page GitHub)
 
 Passe par le serveur local s'il tourne (pour que la page se mette à jour),
 sinon écrit directement dans le fichier de données. Les actions faites ici
@@ -22,6 +23,9 @@ import urllib.request
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from store import COLUMN_IDS, Store  # noqa: E402
 from server import DEFAULT_DATA  # noqa: E402
+from export_md import board_markdown, inject  # noqa: E402
+
+README = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "README.md")
 
 
 class Client:
@@ -94,6 +98,7 @@ def main(argv=None) -> int:
     s.add_argument("--description", default=""); s.add_argument("--effort", default=""); s.add_argument("--risk", default="")
     s.add_argument("--security", default=""); s.add_argument("--theme", default="")
     s = sub.add_parser("move"); s.add_argument("id"); s.add_argument("column", choices=sorted(COLUMN_IDS))
+    s = sub.add_parser("export"); s.add_argument("--readme", default=README)
     a = p.parse_args(argv)
 
     if hasattr(sys.stdout, "reconfigure"):
@@ -123,6 +128,16 @@ def main(argv=None) -> int:
         return 0
     if a.cmd == "move":
         print(fmt(c.update(a.id, {"column": a.column})))
+        return 0
+    if a.cmd == "export":
+        old = ""
+        if os.path.exists(a.readme):
+            with open(a.readme, encoding="utf-8") as f:
+                old = f.read()
+        new = inject(old, board_markdown(c.board()))
+        with open(a.readme, "w", encoding="utf-8", newline="\n") as f:
+            f.write(new)
+        print(f"Roadmap exportée dans {a.readme}")
         return 0
     return 1
 

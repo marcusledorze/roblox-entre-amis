@@ -34,7 +34,13 @@ py roadmap-app/roadmap.py show <id>
 py roadmap-app/roadmap.py resolve <id> "ce qui a été fait" --column done
 py roadmap-app/roadmap.py add "titre" --column p1 --effort S --risk faible
 py roadmap-app/roadmap.py move <id> doing
+py roadmap-app/roadmap.py export      # met à jour la page GitHub (README.md)
 ```
+
+## Page sur GitHub (lecture seule)
+
+La roadmap s'affiche sur la page d'accueil du dépôt : <https://github.com/marcusledorze/roblox-entre-amis#roadmap>.
+Ce bloc est généré par `roadmap.py export`, entre les marqueurs `ROADMAP:START` et `ROADMAP:END` de `README.md`. Il ne faut pas le modifier à la main.
 
 L'outil passe par le serveur s'il tourne (la page se met alors à jour), sinon il écrit directement dans le fichier. Les actions de Claude sont signées `claude` et ne remettent jamais une carte « à traiter ».
 
